@@ -7,3 +7,5 @@
     - Technically Chainlink is ERC677
 - What is an ERC721
 - Advanced solidity Prerequisites
+- Storage
+- Fallback and receive
