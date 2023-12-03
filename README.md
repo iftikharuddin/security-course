@@ -9,3 +9,15 @@
 - Advanced solidity Prerequisites
 - Storage
 - Fallback and receive
+    -     // Fallback function (deprecated)
+          fallback() external payable {
+              // Code to execute when Ether is received (deprecated)
+          }
+      
+          // Receive function
+          receive() external payable {
+              // Code to execute when Ether is received
+          }
+          
+- ABI encode
+- Encoding Function        
