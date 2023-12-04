@@ -22,4 +22,7 @@
 - ABI encode
 - Encoding Function   
 - Upgradeable contracts
+- Small proxy
+- Self destruct
+
      
