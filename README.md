@@ -26,6 +26,10 @@
 - Self destruct
 - Fork tests
 - What is an audit
-
+- The audit
+     - 1 - get Context
+     - 2 - tools and manual review
+     - 3 - write report
+- Rekt test
 
      
