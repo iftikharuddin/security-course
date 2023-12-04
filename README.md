@@ -24,5 +24,8 @@
 - Upgradeable contracts
 - Small proxy
 - Self destruct
+- Fork tests
+- What is an audit
+
 
      
