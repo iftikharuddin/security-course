@@ -51,6 +51,8 @@
 - Writing an amazing finding: Proof of code
 - Writing an amazing finding: Recommended Mitigation
 - Finding Writeup Recap
+- Missing access controls proof of code
+-
 
      
      
