@@ -31,5 +31,15 @@
      - 2 - tools and manual review
      - 3 - write report
 - Rekt test
+- Tools
+- Hacked
+- Attacks
+- Audits
+- First Review
+- Etherscan
+- Details
+- Cloc ( count lines of code )
+- Process Tincho
 
+     
      
