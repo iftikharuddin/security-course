@@ -40,6 +40,17 @@
 - Details
 - Cloc ( count lines of code )
 - Process Tincho
+- Recon: Context
+- Recon: Understanding the code
+- Exploit: Access control
+- Exploit: Public Data
+- Protocol tests
+- Writing an amazing finding
+- Writing an amazing finding: Title
+- Writing an amazing finding: Description
+- Writing an amazing finding: Proof of code
+- Writing an amazing finding: Recommended Mitigation
+- Finding Writeup Recap
 
      
      
