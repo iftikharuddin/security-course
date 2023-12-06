@@ -62,8 +62,8 @@
 - Making a PDF
 - Building your portfolio
 - Recap & Congrats
--
--
+- Puppy Raffle
+- Lesson 1: Introduction
 -
 -
 -
