@@ -64,7 +64,7 @@
 - Recap & Congrats
 - Puppy Raffle
 - Lesson 1: Introduction
--
+- Puppy raffle primer
 -
 -
 -
