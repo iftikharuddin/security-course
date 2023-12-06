@@ -52,6 +52,22 @@
 - Writing an amazing finding: Recommended Mitigation
 - Finding Writeup Recap
 - Missing access controls proof of code
+- Finding Writeup Docs
+- Augmented report with AI
+- Quick primer on what we are learning next
+- Severity rating introduction
+- Assessing highs
+- Severity rating informational
+- Timeboxing
+- Making a PDF
+- Building your portfolio
+- Recap & Congrats
+-
+-
+-
+-
+-
+-
 -
 
      
