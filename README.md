@@ -66,7 +66,8 @@
 - Lesson 1: Introduction
 - Puppy raffle primer
 - Lesson 3: Phase 1: Scoping
--
+- Lesson 4: Tooling: Slither
+- 5. Tooling: Aderyn
 -
 -
 
