@@ -68,7 +68,8 @@
 - Lesson 3: Phase 1: Scoping
 - Lesson 4: Tooling: Slither
 - 5. Tooling: Aderyn
--
+- Lesson 6: Tooling: Solidity Visual Developer
+- Lesson 7: Recon: Reading docs
 -
 
      
