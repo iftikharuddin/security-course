@@ -81,8 +81,8 @@
 - Lesson 16: Exploit: Business logic edge case
 - Lesson 17: Recon: Refund
 - Lesson 18: Exploit: Reentrancy
-- Lesson 19: Reentrancy: Remix example
--
+- Lesson 19: Reentrancy: Remix example [ Do Live test on remix ]
+- Lesson 20: Reentrancy: Mitigation
 -
 -
 -
