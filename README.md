@@ -76,7 +76,8 @@
 - Lesson 11: Exploit: Denial of service
 - Lesson 12: Case Study: DoS
 - Lesson 13: DoS PoC
--
+- Lesson 14: DoS: Reporting
+- Lesson 15: DoS: Mitigation
 -
 
      
