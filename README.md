@@ -87,9 +87,10 @@
 - Lesson 22: Reentrancy: Recap
 - Lesson 23:Reentrancy: PoC
 - Lesson 24: Recon: Continued
--
--
--
+- Lesson 25: Exploit: Weak randomness
+- Lesson 26: Weak randomness: Multiple issues
+- Lesson 27: Case Study: Weak Randomness    
+- Lesson 28: Weak randomness: Mitigation
 -
 -
 -
