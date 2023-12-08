@@ -85,7 +85,8 @@
 - Lesson 20: Reentrancy: Mitigation
 - Lesson 21: Menace To Society
 - Lesson 22: Reentrancy: Recap
--
+- Lesson 23:Reentrancy: PoC
+- Lesson 24: Recon: Continued
 -
 -
 -
