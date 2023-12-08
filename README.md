@@ -78,6 +78,21 @@
 - Lesson 13: DoS PoC
 - Lesson 14: DoS: Reporting
 - Lesson 15: DoS: Mitigation
+- Lesson 16: Exploit: Business logic edge case
+- Lesson 17: Recon: Refund
+- Lesson 18: Exploit: Reentrancy
+- Lesson 19: Reentrancy: Remix example
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
 -
 
      
