@@ -70,6 +70,13 @@
 - 5. Tooling: Aderyn
 - Lesson 6: Tooling: Solidity Visual Developer
 - Lesson 7: Recon: Reading docs
+- Lesson 8: Recon: Reading the code
+- Lesson 9: Recon: Reading docs II
+- Lesson 10: sc-exploits-minimized
+-
+-
+-
+-
 -
 
      
