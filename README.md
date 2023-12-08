@@ -83,8 +83,8 @@
 - Lesson 18: Exploit: Reentrancy
 - Lesson 19: Reentrancy: Remix example [ Do Live test on remix ]
 - Lesson 20: Reentrancy: Mitigation
--
--
+- Lesson 21: Menace To Society
+- Lesson 22: Reentrancy: Recap
 -
 -
 -
