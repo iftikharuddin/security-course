@@ -91,10 +91,13 @@
 - Lesson 26: Weak randomness: Multiple issues
 - Lesson 27: Case Study: Weak Randomness    
 - Lesson 28: Weak randomness: Mitigation
--
--
--
--
+- Lesson 29: Exploit: Integer overflow
+- Lesson 30: Integer overflow: Mitigation
+- Lesson 31: Exploit: Unsafe casting
+    - e.g fee var is uint256 and you want to cast it into uint64(fee), so it will truncate the actual value
+    - cuz uin64 can't hold uint256 value if its big ( Unsafe casting )
+- Lesson 32: Recon II
+- Lesson 33: Exploit: Mishandling Of ETH
 -
 
      
