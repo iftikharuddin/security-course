@@ -108,11 +108,13 @@
 - Lesson 41: Aderyn walkthrough
 - Lesson 42: Test coverage
 - Lesson 43: Phase 4: Reporting primer
--
--
--
--
--
+- Lesson 44: What is a competitive audit?
+- Lesson 45: Codehawks
+- Lesson 46: Submitting a competitive audit finding
+- Lesson 47: Reporting templates
+- Lesson 48: Reporting: Floating pragma
+- Lesson 49: Reporting: Incorrect solc version
+- Lesson 50: Reporting: Unchanged state variables should be immutable or constant
 -
 -
 -
