@@ -121,6 +121,8 @@
 - Lesson 54: Reporting Reentrancy
 - Lesson 55: Reporting: getActivePlayerindex
 - Lesson 56: Reporting: Should Follow CEI
+- Lesson 57: Reporting: Weak Randomness
+- Lesson 58: Reporting: Magic Numbers
 -
 -
 -
