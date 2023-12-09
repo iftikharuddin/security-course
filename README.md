@@ -115,7 +115,12 @@
 - Lesson 48: Reporting: Floating pragma
 - Lesson 49: Reporting: Incorrect solc version
 - Lesson 50: Reporting: Unchanged state variables should be immutable or constant
--
+- Lesson 51: Reporting: Zero address check
+- Lesson 52: Reporting: Storage variables in loops should be cached
+- Lesson 53: Reporting Findings We'll Cover Later
+- Lesson 54: Reporting Reentrancy
+- Lesson 55: Reporting: getActivePlayerindex
+- Lesson 56: Reporting: Should Follow CEI
 -
 -
 -
