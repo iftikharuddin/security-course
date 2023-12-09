@@ -104,7 +104,17 @@
 - Lesson 37: Answering our questions
 - Lesson 38: Info and gas findings
 - Lesson 39: Pit stop
-- 
+- Lesson 40: Slither walkthrough ( slither . --exclude-dependencies )
+- Lesson 41: Aderyn walkthrough
+- Lesson 42: Test coverage
+- Lesson 43: Phase 4: Reporting primer
+-
+-
+-
+-
+-
+-
+-
 -
 -
 -
