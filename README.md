@@ -98,6 +98,16 @@
     - cuz uin64 can't hold uint256 value if its big ( Unsafe casting )
 - Lesson 32: Recon II
 - Lesson 33: Exploit: Mishandling Of ETH
+- Lesson 34: Mishandling of ETH: Minimized
+- Lesson 35: Case Study: Mishandling of ETH
+- Lesson 36: Recon III
+- Lesson 37: Answering our questions
+- Lesson 38: Info and gas findings
+- Lesson 39: Pit stop
+- 
+-
+-
+-
 -
 
      
