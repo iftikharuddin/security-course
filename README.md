@@ -131,9 +131,18 @@
 - Lesson 64: Exercises
 - Lesson 65: Solodit
 - Lesson 66: Wrapping Up (Section 4 done)
--
--
--
 
-     
-     
+
+_____
+## Tswap - section 5
+
+- Lesson 1: Introduction
+- Lesson 2: Phase 1: Scoping
+-
+-
+-
+-
+-
+-
+-
+-
