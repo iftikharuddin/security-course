@@ -138,7 +138,10 @@ _____
 
 - Lesson 1: Introduction
 - Lesson 2: Phase 1: Scoping
--
+- Lesson 3: Primer On This Review
+- Lesson 4: What is a DEX?
+- Lesson 5: What is an AMM?
+- 
 -
 -
 -
