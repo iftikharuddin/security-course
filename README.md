@@ -123,8 +123,14 @@
 - Lesson 56: Reporting: Should Follow CEI
 - Lesson 57: Reporting: Weak Randomness
 - Lesson 58: Reporting: Magic Numbers
--
--
+- Lesson 59: Reporting: Integer Overflow
+- Lesson 60: Reporting: Smart Contract Wallet Reverts Winning
+- Lesson 61: Reporting: Mishandling Of ETH
+- Lesson 62: Reporting: Missing Events And Remove Dead Code
+- Lesson 63: Adding The Audit To Our Portfolio
+- Lesson 64: Exercises
+- Lesson 65: Solodit
+- Lesson 66: Wrapping Up (Section 4 done)
 -
 -
 -
