@@ -159,6 +159,11 @@ _____
 - Lesson 13: Where Stateless Fuzzing Fails
 - Lesson 14: Fuzzing Where Method 1 Fails
 - Lesson 15: Stateful Fuzzing Method 2
+- Lesson 16: Debugging Fuzz Sequences
+- Lesson 17: Fuzzing Recap
+- Lesson 18: Weird Erc20s
+- Lesson 19: Writing Stateful Fuzz Test Suite
+- Lesson 20: Constant Product Formula Explained
 -
 -
 -
