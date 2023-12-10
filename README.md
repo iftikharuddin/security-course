@@ -141,7 +141,8 @@ _____
 - Lesson 3: Primer On This Review
 - Lesson 4: What is a DEX?
 - Lesson 5: What is an AMM?
-- 
+- Lesson 6: Liquidity Providers
+- Lesson 7: How AMMs Work
 -
 -
 -
