@@ -143,8 +143,22 @@ _____
 - Lesson 5: What is an AMM?
 - Lesson 6: Liquidity Providers
 - Lesson 7: How AMMs Work
--
--
+- Lesson 8: TSwap Recon Continued
+- Lesson 9: Invariant & Properties Introduction
+- Lesson 10: Stateful And Stateless Fuzzing
+- Lesson 11. Stateless And Stateful Fuzzing Practice
+- Lesson 12: Stateless Fuzzing
+    - Stateless Fuzzing: Calling a function with random data, a whole bunch of time
+    - Stateful Fuzzing: Call a whole bunch of functions with a whole bunch of data, [no restrictions ->very randomness]
+    - [fuzz]
+      runs = 1000
+      seed = '0x2'
+     
+    - the more the runs the more chances it catches bug, and seed is for unique results, so it is very important!  
+    - fail_on_revert = true // this needs to be false if you don't want reverts in results and just want invariants break
+- Lesson 13: Where Stateless Fuzzing Fails
+- Lesson 14: Fuzzing Where Method 1 Fails
+- Lesson 15: Stateful Fuzzing Method 2
 -
 -
 -
