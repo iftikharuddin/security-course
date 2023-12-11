@@ -164,7 +164,7 @@ _____
 - Lesson 18: Weird Erc20s
 - Lesson 19: Writing Stateful Fuzz Test Suite
 - Lesson 20: Constant Product Formula Explained
--
+- Lesson 21: Invariant.t.sol
 -
 -
 -
