@@ -192,6 +192,11 @@ _____
 - Lesson 46: Reporting: Weird Erc20
 - Lesson 47: Creating Pdf For Your Portfolio
 - Lesson 48: Recap
+- Lesson 49: Exercises
+
+# Thunderloan ( Section 6 )
+
+- Lesson 1: Introduction
 -
 -
 -
