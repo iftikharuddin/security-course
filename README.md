@@ -179,5 +179,14 @@ _____
 - Lesson 33: Using The Compiler As Static Analysis Tool
 - Lesson 34: Add Liquidity
 - Lesson 35: Remove Liquidity
+- Lesson 36: Exact Input
+- Lesson 37: Exact Output
+- Lesson 38: Sell Pool Tokens
+- Lesson 39: Checking The Last Few Functions
+- Lesson 40: Phase 4: Reporting
+- 
+-
+-
+-
 -
 -
