@@ -184,7 +184,19 @@ _____
 - Lesson 38: Sell Pool Tokens
 - Lesson 39: Checking The Last Few Functions
 - Lesson 40: Phase 4: Reporting
-- 
+- Lesson 41: Reporting: Missing Deadline
+- Lesson 42: Reporting Continued
+- Lesson 43: Reporting: No Slippage Protection
+- Lesson 44: Reporting: Sell Pool Tokens
+- Lesson 45: Reporting: Invariant Break & PoC
+- Lesson 46: Reporting: Weird Erc20
+- Lesson 47: Creating Pdf For Your Portfolio
+- Lesson 48: Recap
+-
+-
+-
+-
+-
 -
 -
 -
