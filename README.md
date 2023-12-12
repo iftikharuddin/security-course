@@ -175,8 +175,9 @@ _____
 - Lesson 29: Slither
 - Lesson 30: Aderyn
 - Lesson 31: Pool Factory
--
--
--
+- Lesson 32: Manual Review: Swap Pool
+- Lesson 33: Using The Compiler As Static Analysis Tool
+- Lesson 34: Add Liquidity
+- Lesson 35: Remove Liquidity
 -
 -
