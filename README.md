@@ -168,6 +168,7 @@ _____
 - Lesson 22: Handler.t.sol
 - Lesson 23: Handler Swap Function
 - Lesson 24: Final Invariant And Tweaks
+- Lesson 25: Debugging The Fuzzer
 -
 -
 -
