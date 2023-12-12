@@ -171,6 +171,10 @@ _____
 - Lesson 25: Debugging The Fuzzer
 - Lesson 26: One Last Huzzah
 - Lesson 27: Notes On Invariants
+- Lesson 28: Recon: Manual Review Introduction
+- Lesson 29: Slither
+- Lesson 30: Aderyn
+- Lesson 31: Pool Factory
 -
 -
 -
