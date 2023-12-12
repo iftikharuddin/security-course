@@ -167,7 +167,8 @@ _____
 - Lesson 21: Invariant.t.sol
 - Lesson 22: Handler.t.sol
 - Lesson 23: Handler Swap Function
-- 
+- Lesson 24: Final Invariant And Tweaks
+-
 -
 -
 -
