@@ -197,6 +197,17 @@ _____
 # Thunderloan ( Section 6 )
 
 - Lesson 1: Introduction
+- Lesson 2: Phase 1: Scoping
+- Lesson 3: Reading The Docs
+- Lesson 4: What is a Flash Loan?
+- Lesson 5: Pay Back Or Revert
+- Lesson 6: Liquidity Providers
+- Lesson 7: Arbitrage Walkthrough
+- Lesson 8: Are Flash Loans Bad?
+- Lesson 9: Recap
+- Lesson 10: Recon Continued
+- Lesson 11: Static Analysis - Slither & Aderyn
+-
 -
 -
 -
