@@ -216,7 +216,11 @@ _____
 - Lesson 18: IFlashloanReceiver
 - Lesson 19: OracleUpgradeable
 - Lesson 20: Exploit: Failure To Initialize
--
+- Lesson 21: Failure To Initialize: Remix
+- Lesson 22: Case Study: Failure To Initialize
+- Lesson 23: OracleUpgradeable Continued
+- Lesson 24: AssetToken
+- 
 -
 -
 -
