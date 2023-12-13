@@ -211,6 +211,10 @@ _____
 - Lesson 13: Case Study: Oasis
 - Lesson 14: Static Analysis Continued
 - Lesson 15: Recon IPoolFactory
+- Lesson 16: ITSwapPool
+- Lesson 17: IThunderLoan
+- Lesson 18: IFlashloanReceiver
+- Lesson 19: OracleUpgradeable
 - 
 -
 -
