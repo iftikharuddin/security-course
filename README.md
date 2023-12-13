@@ -207,7 +207,11 @@ _____
 - Lesson 9: Recap
 - Lesson 10: Recon Continued
 - Lesson 11: Static Analysis - Slither & Aderyn
--
+- Lesson 12: Exploit: Centralization
+- Lesson 13: Case Study: Oasis
+- Lesson 14: Static Analysis Continued
+- Lesson 15: Recon IPoolFactory
+- 
 -
 -
 -
