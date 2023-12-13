@@ -215,7 +215,8 @@ _____
 - Lesson 17: IThunderLoan
 - Lesson 18: IFlashloanReceiver
 - Lesson 19: OracleUpgradeable
-- 
+- Lesson 20: Exploit: Failure To Initialize
+-
 -
 -
 -
