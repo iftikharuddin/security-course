@@ -222,6 +222,16 @@ _____
 - Lesson 24: AssetToken
 - Lesson 25: AssetToken: Update Exchange Rate
 - Lesson 26: Thunderloan: Starting At The Top
+- Lesson 27: ThunderLoan Functions
+- Lesson 28: Testing Deleting Mappings
+- Lesson 29: Note On Linear Progress
+- Lesson 30: ThunderLoan Continued
+- Lesson 31: Diagramming ThunderLoan
+- Lesson 32: ThunderLoan Redeem
+- Lesson 33: ThunderLoan Flashloan
+- Lesson 34: Note On Being Discouraged
+- Lesson 35: ThunderLoan Repay Final Functions
+- Lesson 36: Answering Our Questions
 -
 -
 -
