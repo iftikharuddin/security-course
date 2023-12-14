@@ -220,7 +220,9 @@ _____
 - Lesson 22: Case Study: Failure To Initialize
 - Lesson 23: OracleUpgradeable Continued
 - Lesson 24: AssetToken
-- 
+- Lesson 25: AssetToken: Update Exchange Rate
+- Lesson 26: Thunderloan: Starting At The Top
+-
 -
 -
 -
