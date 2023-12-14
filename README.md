@@ -232,7 +232,8 @@ _____
 - Lesson 34: Note On Being Discouraged
 - Lesson 35: ThunderLoan Repay Final Functions
 - Lesson 36: Answering Our Questions
--
+- Lesson 37: Improving Test Coverage To Find A High
+- 
 -
 -
 -
