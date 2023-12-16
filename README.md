@@ -247,4 +247,17 @@ _____
 
 ## MEV
 
+- 1. Introduction
+- 2. Perseverance
+- 3. MEV: Introduction
+- 4. MEV: Minimized Duration
+- 5. MEV: Puppy Raffle Duration
+- 6. MEV: TSwap Duration
+- 7. MEV: ThunderLoan
+- 8. MEV: BossBridge
+- 9. MEV: LIVE
+- 10. MEV: Live AGAIN
+- 11. Case Study: Pashov
+
+-
 - 1 - 7 lectures done
