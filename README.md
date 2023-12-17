@@ -258,6 +258,10 @@ _____
 - 9. MEV: LIVE
 - 10. MEV: Live AGAIN
 - 11. Case Study: Pashov
-
+- Lesson 12: MEV: Prevention
+- Lesson 13: MEV: Recap
+- Lesson 14: Governance Attack: Intro
+- Lesson 15: Case Study: Bean
 -
-- 1 - 7 lectures done
+-
+-
