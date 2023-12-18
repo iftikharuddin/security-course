@@ -164,8 +164,8 @@ _____
 - Lesson 18: Weird Erc20s
 - Lesson 19: Writing Stateful Fuzz Test Suite
 - Lesson 20: Constant Product Formula Explained
-- Lesson 21: Invariant.t.sol
-- Lesson 22: Handler.t.sol
+- Lesson 21: Invariant.t.sol ( Important )
+- Lesson 22: Handler.t.sol ( Important )
 - Lesson 23: Handler Swap Function
 - Lesson 24: Final Invariant And Tweaks
 - Lesson 25: Debugging The Fuzzer
