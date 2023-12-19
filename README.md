@@ -240,14 +240,15 @@ _____
 - Lesson 42: Exploit: Deposit Instead Of Repay
 - Lesson 43: Exploit: Storage Collision
 - Lesson 44: Storage Collision: Diagram
--
--
--
--
--
--
--
--
+- Lesson 45: Storage Collision: Remix Examplee
+- Lesson 46: Storage Collision: Poc
+- Lesson 47: Reporting: Storage Collision
+- Lesson 48: Wrapping Up
+- Lesson 49: Section 6 Recap ( ThunderLoan section ended )
+
+## Boss Bridge
+
+- Lesson 1: Introduction
 -
 -
 -
