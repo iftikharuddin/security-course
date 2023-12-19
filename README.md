@@ -236,6 +236,10 @@ _____
 - Lesson 38: Exploit: Oracle Manipulation
 - Lesson 39: Oracle Manipulation: Minimized
 - Lesson 40: Oracle Manipulation: ThunderLoan Poc
+- Lesson 41: Oracle Manipulation: Recap
+- Lesson 42: Exploit: Deposit Instead Of Repay
+- Lesson 43: Exploit: Storage Collision
+- Lesson 44: Storage Collision: Diagram
 -
 -
 -
