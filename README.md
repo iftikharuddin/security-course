@@ -233,7 +233,10 @@ _____
 - Lesson 35: ThunderLoan Repay Final Functions
 - Lesson 36: Answering Our Questions
 - Lesson 37: Improving Test Coverage To Find A High
-- 
+- Lesson 38: Exploit: Oracle Manipulation
+- Lesson 39: Oracle Manipulation: Minimized
+- Lesson 40: Oracle Manipulation: ThunderLoan Poc
+-
 -
 -
 -
