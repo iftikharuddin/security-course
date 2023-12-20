@@ -251,7 +251,10 @@ _____
 - Lesson 1: Introduction
 - Lesson 2: Phase 1: Scoping
 - Lesson 3: Phase 2: Recon
--
+- Lesson 4: Checklist
+- Lesson 5: Docs
+- Lesson 6: Boss Bridge Diagram
+-  
 -
 -
 
