@@ -254,7 +254,13 @@ _____
 - Lesson 4: Checklist
 - Lesson 5: Docs
 - Lesson 6: Boss Bridge Diagram
--  
+- Lesson 7: L1 Token
+- Lesson 8: Vault
+- Lesson 9: Yul Opcodes
+- Lesson 10: Unsupported Opcodes
+- Lesson 11: BossBridge
+- Lesson 12: Signatures
+- 
 -
 -
 
