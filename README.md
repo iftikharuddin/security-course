@@ -249,6 +249,8 @@ _____
 ## Boss Bridge
 
 - Lesson 1: Introduction
+- Lesson 2: Phase 1: Scoping
+- Lesson 3: Phase 2: Recon
 -
 -
 -
