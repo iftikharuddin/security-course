@@ -270,6 +270,8 @@ _____
 - Lesson 20: Arbitrary From: Poc
 - Lesson 21: Recon Continued (again)
 - Lesson 22: Vault
+- Lesson 23: Why are these not the same finding?
+- Lesson 24: Recon Continued Again (again)
 -
 -
 - 
