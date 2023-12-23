@@ -262,7 +262,8 @@ _____
 - Lesson 12: Signatures
 - Lesson 13: Signatures Summarized
 - Lesson 14: EIP-712
-- 
+- Lesson 15: Case Study: Polygon
+-
 -
 - 
 
