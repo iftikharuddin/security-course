@@ -263,7 +263,11 @@ _____
 - Lesson 13: Signatures Summarized
 - Lesson 14: EIP-712
 - Lesson 15: Case Study: Polygon
--
+- Lesson 16: Signatures Recap
+- Lesson 17: Recon Continued
+- Lesson 18: depositTokenToL2
+- Lesson 19: Exploit: Arbitrary From
+- 
 -
 - 
 
