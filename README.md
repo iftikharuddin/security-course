@@ -261,8 +261,10 @@ _____
 - Lesson 11: BossBridge
 - Lesson 12: Signatures
 - Lesson 13: Signatures Summarized
+- Lesson 14: EIP-712
+- 
 -
--
+- 
 
 ## MEV
 
