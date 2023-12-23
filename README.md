@@ -266,8 +266,11 @@ _____
 - Lesson 16: Signatures Recap
 - Lesson 17: Recon Continued
 - Lesson 18: depositTokenToL2
-- Lesson 19: Exploit: Arbitrary From
-- 
+- Lesson 19: Exploit: Arbitrary From (safeTransfer(from))
+- Lesson 20: Arbitrary From: Poc
+- Lesson 21: Recon Continued (again)
+- Lesson 22: Vault
+-
 -
 - 
 
