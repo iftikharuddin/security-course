@@ -272,6 +272,9 @@ _____
 - Lesson 22: Vault
 - Lesson 23: Why are these not the same finding?
 - Lesson 24: Recon Continued Again (again)
+- Lesson 25: Exploit: Signature Replay
+- Lesson 26: Signature Replay: Minimizd
+- Lesson 27: Signature Replay: Protection
 -
 -
 - 
