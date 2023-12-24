@@ -275,9 +275,11 @@ _____
 - Lesson 25: Exploit: Signature Replay
 - Lesson 26: Signature Replay: Minimizd
 - Lesson 27: Signature Replay: Protection
--
--
-- 
+- Lesson 28: Signature Replay: Prevention
+- Lesson 29: Exploit: Low level call to itself
+- Lesson 30: Exploit: Gas Bomb
+- Lesson 31: Recap
+- Lesson 32: Exercises
 
 ## MEV
 
