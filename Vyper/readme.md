@@ -1,6 +1,14 @@
 To help you prepare, or at least become a little familiar with Vyper, I highly recommend exploring the Vyper documentation: https://docs.vyperlang.org/. A tutorial on Vyper that I've particularly enjoyed is the following one, brought to you by the Curve Finance team: https://github.com/curvefi/vyper-tutorial.
 
-Topics:
+##Topics:
+
+- Curve Vyper Tutorial Lesson 1 - Setup
+    - Vyper was launched by Vitalik Buterin in 2018
+    - Security, Simplicity and Auditability
+- Curve Vyper Tutorial Lesson 2 - Contracts
+
+
+## Extra:
 
 - Brownie Tutorial 1 -- Welcome and Introduction
     - Solidity is turning complete ( 2014 -> inspired from JAVA )
@@ -8,6 +16,7 @@ Topics:
     - Turing complete simply means that it allows any type of calculations
     - Turing complete program is haltable, it might run an infinite loop that will never end and that's not good if you are running a decentralized network
     - Brownie handles both lang
+- Brownie Tutorial 2 -- Installation
 - 
 -
 
