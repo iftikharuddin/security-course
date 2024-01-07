@@ -3,6 +3,11 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
 Topics:
 
 - Brownie Tutorial 1 -- Welcome and Introduction
+    - Solidity is turning complete ( 2014 -> inspired from JAVA )
+    - Vyper is not turning complete for security reasons ( Based on Python however python lang is turing complete ) (2018)
+    - Turing complete simply means that it allows any type of calculations
+    - Turing complete program is haltable, it might run an infinite loop that will never end and that's not good if you are running a decentralized network
+    - Brownie handles both lang
 - 
 -
 
