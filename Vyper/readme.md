@@ -7,6 +7,8 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
     - Security, Simplicity and Auditability
 - Curve Vyper Tutorial Lesson 2 - Contracts
 - Curve Vyper Tutorial Lesson 3 - State Variables
+- Curve Vyper Tutorial Lesson 4 - Assertions
+- Curve Vyper Tutorial Lesson 5 - Interfaces
 
 Playlist: https://www.youtube.com/watch?v=zZTGuPlWrHo&list=PLVOHzVzbg7bFnLnl3t5egG5oWpOhfdD1D&index=2
 
