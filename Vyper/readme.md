@@ -6,7 +6,9 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
     - Vyper was launched by Vitalik Buterin in 2018
     - Security, Simplicity and Auditability
 - Curve Vyper Tutorial Lesson 2 - Contracts
+- Curve Vyper Tutorial Lesson 3 - State Variables
 
+Playlist: https://www.youtube.com/watch?v=zZTGuPlWrHo&list=PLVOHzVzbg7bFnLnl3t5egG5oWpOhfdD1D&index=2
 
 ## Extra:
 
