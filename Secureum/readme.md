@@ -20,4 +20,13 @@ Secureum Races video solution by **patrickd**
 
 ## Race-01
 - Question 1 of the Secureum RACE-1
+- Question 2 of the Secureum RACE-1
+- Question 3 of the Secureum RACE-1
+- Question 4 of the Secureum RACE-1
+- Question 5 of the Secureum RACE-1
+-
+-
+-
+-
+-
 
