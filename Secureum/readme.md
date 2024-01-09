@@ -24,7 +24,7 @@ Secureum Races video solution by **patrickd**
 - Question 3 of the Secureum RACE-1
 - Question 4 of the Secureum RACE-1
 - Question 5 of the Secureum RACE-1
--
+- Question 6 of the Secureum RACE-1
 -
 -
 -
