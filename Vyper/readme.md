@@ -9,6 +9,11 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
 - Curve Vyper Tutorial Lesson 3 - State Variables
 - Curve Vyper Tutorial Lesson 4 - Assertions
 - Curve Vyper Tutorial Lesson 5 - Interfaces
+- Curve Vyper Tutorial Lesson 6 - Imports
+    - e.g Import Token as token;
+    - or From Token import token;
+- Curve Vyper Tutorial Lesson 8 - Math
+- 
 
 Playlist: https://www.youtube.com/watch?v=zZTGuPlWrHo&list=PLVOHzVzbg7bFnLnl3t5egG5oWpOhfdD1D&index=2
 
