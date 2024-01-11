@@ -21,6 +21,10 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
     - 69 / 100 * 10 ** 18 -> leads to 0, cuz 69 / 100 = 0
     - the trick is to make numerator so big, then divide with denominator
         - 10 ** 18 * 69 / 100 => 690000000000000000 ( 69 cents ? )
+            - if you wanna get back the original number just divide 690000000000000000 / 10 ^ 18
+            - SafeMath comes built in by default in Vyper
+            - Always check for overflows in numerator
+- Curve Vyper Tutorial Lesson 9 - Struct
 - 
 
 Playlist: https://www.youtube.com/watch?v=zZTGuPlWrHo&list=PLVOHzVzbg7bFnLnl3t5egG5oWpOhfdD1D&index=2
