@@ -13,6 +13,14 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
     - e.g Import Token as token;
     - or From Token import token;
 - Curve Vyper Tutorial Lesson 8 - Math
+    - Integer Math
+    - dy (change in y) (simple algebra)
+    - dy -> how many tokens we put in and how many we gets out?
+    - 69/100 if we are using default uint256 it will return 0
+    - 69.0 / 100.0 = Fixed (0.69) ( in vyper you need to specifiy clearly if you want decimals in results ) 
+    - 69 / 100 * 10 ** 18 -> leads to 0, cuz 69 / 100 = 0
+    - the trick is to make numerator so big, then divide with denominator
+        - 10 ** 18 * 69 / 100 => 690000000000000000 ( 69 cents ? )
 - 
 
 Playlist: https://www.youtube.com/watch?v=zZTGuPlWrHo&list=PLVOHzVzbg7bFnLnl3t5egG5oWpOhfdD1D&index=2
