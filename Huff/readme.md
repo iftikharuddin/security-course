@@ -31,3 +31,10 @@ Functions look extremely similar to macros, but behave somewhat differently. Ins
 ## Custom Errors
 
 - you can use custom error in huff
+
+## Function Dispatching
+
+Function dispatching is something that is fundamental to any Huff contract. Unlike Solidity and Vyper; Huff does not abstract function dispatching. In this section we will go over how dispatching is performed in the other languages, and how you may go about it in Huff.
+
+    - Linear Dispatching
+    - 0x00 calldataload 0xE0 shr
