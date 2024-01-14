@@ -25,8 +25,12 @@ Secureum Races video solution by **patrickd**
 - Question 4 of the Secureum RACE-1
 - Question 5 of the Secureum RACE-1
 - Question 6 of the Secureum RACE-1 ( https://www.youtube.com/watch?v=iIeHHX3O1Zs )
-- Question 7
--
+- Questions 7 & 8 of the Secureum RACE-1
+    - overflow and underflow are handled auto in 0.8.0 and above, however there still can be tricky situations where it happens
+    - for ERC20 decimals are intended to be uint8 and 18 decimals
+    - ERC777 is an extension of ERC20
+        - it is well known for callback functions which often has allowed for reentrancy
+        - safeTransfer doesn't allow reentrancy
 -
 -
 
