@@ -31,6 +31,9 @@ Secureum Races video solution by **patrickd**
     - ERC777 is an extension of ERC20
         - it is well known for callback functions which often has allowed for reentrancy
         - safeTransfer doesn't allow reentrancy
--
--
+
+## Race-2 (DAO)
+
+- Question 1 of the Secureum RACE-2
+
 
