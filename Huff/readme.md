@@ -73,3 +73,11 @@ Function dispatching is something that is fundamental to any Huff contract. Unli
 - FREE_STORAGE_POINTER, its kinda counter for storage slots
 - HUFF is pure byte code not a language - Devtooligan
 - HUFF has scalibility issues?
+
+## HUFF tips from a podcast ( https://youtu.be/o9HCIRO5k4o?list=PLvTTi6nJwLWDcf3sKx5xI-j5Lv-prhvam )
+
+- HUFF has so many foot guns
+- Hyper optimized contracts can be written in HUFF
+- Eleptic Curve Optimisation leads to HUFF tooling invention, by Aztec
+- Devtooligan: There might be great uses for HUFF contracts in future but not recommended for production now.
+- In HUFF when you say that the function is not payable, you need to add code so that it reverts the ETH. In Solidity adding payable is considered good for gas.
