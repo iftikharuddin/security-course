@@ -35,5 +35,7 @@ Secureum Races video solution by **patrickd**
 ## Race-2 (DAO)
 
 - Question 1 of the Secureum RACE-2
+    - DAO related questions 
+- Question 1 of the Secureum RACE-2
 
 
