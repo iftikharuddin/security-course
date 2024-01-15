@@ -41,3 +41,35 @@ Function dispatching is something that is fundamental to any Huff contract. Unli
 
 ## EVM Through HUFF: Devtooligan https://youtu.be/Rfaabjj7n9k
 
+- Huff compiler ignore the spaces
+    - e.g `0x00 calldataload 0xE0 shr` is equal to below
+       ````
+        0x00 
+        calldataload
+        0xE0
+        shr
+
+- this just loads the first 4 bytes of call data onto the stack ( 0x00 calldataload 0xE0 shr )
+    - The first 4 bytes is gonna be the func signature
+    - The next 32 bytes gonna be the first argument
+- dup1 just duplicate the item and put it on the top of stack
+- eq, checks if the 2 items are equal it puts 1 on the stack otherwise put 0 on the stack
+
+### Program counter
+
+- Jump in HUFF: 
+    - The place where you are jumping to must have a JUMPDEST OPCODE
+
+- Revert: It takes 2 items of the stack and offset in a size.
+
+### Macro vs Functions
+
+- Macro: Huff duplicates the code when macro is called 
+- Function: not gas efficient
+
+### Calldata
+
+- 0x04 calldataload // [account] when 0x04 is used it means read the first argument from call data
+- FREE_STORAGE_POINTER, its kinda counter for storage slots
+- HUFF is pure byte code not a language - Devtooligan
+- HUFF has scalibility issues?
