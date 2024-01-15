@@ -36,6 +36,10 @@ Secureum Races video solution by **patrickd**
 
 - Question 1 of the Secureum RACE-2
     - DAO related questions 
-- Question 1 of the Secureum RACE-2
+- Question 2 of the Secureum RACE-2
+    - Guarded launch via circuit breaker
+- Question 3 of the Secureum RACE-2
+- Questions 4 & 5 of the Secureum RACE-2
+
 
 
