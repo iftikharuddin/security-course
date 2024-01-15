@@ -38,3 +38,6 @@ Function dispatching is something that is fundamental to any Huff contract. Unli
 
     - Linear Dispatching
     - 0x00 calldataload 0xE0 shr
+
+## EVM Through HUFF: Devtooligan https://youtu.be/Rfaabjj7n9k
+
