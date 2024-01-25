@@ -66,6 +66,8 @@ Function dispatching is something that is fundamental to any Huff contract. Unli
 
 - Macro: Huff duplicates the code when macro is called 
 - Function: not gas efficient
+- The takes field refers to how many EVM stack items this macro consumes. returns refers to how many EVM stack items this macro will add onto the stack.
+
 
 ### Calldata
 
