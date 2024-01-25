@@ -25,8 +25,8 @@ To help you prepare, or at least become a little familiar with Vyper, I highly r
             - SafeMath comes built in by default in Vyper
             - Always check for overflows in numerator
 - Curve Vyper Tutorial Lesson 9 - Struct
-- 
-- Get ready for secureum Vyper Race
+- Curve Vyper Tutorial Lesson 10 - HashMap
+
 
 Playlist: https://www.youtube.com/watch?v=zZTGuPlWrHo&list=PLVOHzVzbg7bFnLnl3t5egG5oWpOhfdD1D&index=2
 
