@@ -19,4 +19,12 @@
     - then mask will be             0xffff0000fffffffffffffffffffff
     - in this clear value will be   0x02030000203304040400000000004
 - shl, shr => shift left, shift right
-    
+- Working with memory in Yul (mstore & mstore8)
+- Solidity, no garbage collection
+    - Memory is arranged in 32 bytes sequences
+    - Only 4 instructions: mload, mstore, mstore8, and msize
+- Basics of working with the free memory pointer via Yul
+    - Lack of free memory pointer management
+    - In solidity, the 0x40 slot in memory is special: it contains the "free memory pointer" which points to the end of the currently allocated memory.
+    - When you use inline assembly, you should load the data stored at 0x40 and then only write to addresses after the result. When you're done, if you want to keep that memory allocated, you should overwrite 0x40 with the new value of the free memory pointer.
+    - ref ( https://ethereum.stackexchange.com/questions/9603/understanding-mload-assembly-function )
