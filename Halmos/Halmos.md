@@ -7,3 +7,9 @@
     - Halmos not doing gas, not evm modeling?
     - it is python interpreter for EVM bytecode
     - Z3 is the popular SMT lang
+- Halmos doesn't support invariant tests
+    - but you can mimic it
+    
+- Very soon it should be normalized when deploying a protocol
+    - have test suite (fuzzing ofcourse) & invariant tests
+    - formal verifications
