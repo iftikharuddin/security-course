@@ -47,9 +47,24 @@
 - Rollup node is like ETHEREUM consensus client
 - Speaks the engine JSON RPC API (with 2 small extensions)
 - Engine API
-    - NewPayloadV1 - insert new block into the EL
+    - NewPayloadV1 - insert new block into the EL (Execution layer)
     - ForkChoiceUpdateV1 - does everything else
         - specify preferred head block ( safe + finalized blocks )
         - starts block building process on the head block
     - GetPayloadV1 - get block that was built by the FCU call
     - ExchangeTransitionConfigurationV1 - not relevant
+    
+## Rollup Node - Deposits + Batches
+- Deposits serves two purposes
+    - deposit into L2
+    - Enable L2 to progress in the absence of the sequencer
+    
+## Rollup Node - P2P
+- Sequencer gossips blocks as they are created to the network
+- Enables snap sync (not live yet)
+
+## Sequencer + Batcher
+- Sequencer creates L2 blocks based on deposits + incoming L2 trxs
+- Distributes blocks via p2p as they are created
+- all rollup nodes have sequencing codes. it is like mining the code in ethereum
+
