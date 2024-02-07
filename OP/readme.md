@@ -42,3 +42,14 @@
 - It talks to the L2 execution engine (EE) via the ETH engine API
 - Optionally takes part in p2p network
 - Significantly simpler than the current L2 GETH implementation
+
+## Rollup Node - Engine API
+- Rollup node is like ETHEREUM consensus client
+- Speaks the engine JSON RPC API (with 2 small extensions)
+- Engine API
+    - NewPayloadV1 - insert new block into the EL
+    - ForkChoiceUpdateV1 - does everything else
+        - specify preferred head block ( safe + finalized blocks )
+        - starts block building process on the head block
+    - GetPayloadV1 - get block that was built by the FCU call
+    - ExchangeTransitionConfigurationV1 - not relevant
