@@ -27,4 +27,4 @@
     - Lack of free memory pointer management
     - In solidity, the 0x40 slot in memory is special: it contains the "free memory pointer" which points to the end of the currently allocated memory.
     - When you use inline assembly, you should load the data stored at 0x40 and then only write to addresses after the result. When you're done, if you want to keep that memory allocated, you should overwrite 0x40 with the new value of the free memory pointer.
-    - ref ( https://ethereum.stackexchange.com/questions/9603/understanding-mload-assembly-function )
+    - ref ( https://ether``eum.stackexchange.com/questions/9603/understanding-mload-assembly-function )
