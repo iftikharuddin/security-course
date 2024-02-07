@@ -66,5 +66,12 @@
 ## Sequencer + Batcher
 - Sequencer creates L2 blocks based on deposits + incoming L2 trxs
 - Distributes blocks via p2p as they are created
-- all rollup nodes have sequencing codes. it is like mining the code in ethereum
+- Batcher: all rollup nodes have sequencing codes. it is like mining the code in ethereum
+takes L2 blocks produced by the sequencer and transforms them to the data format expected by the rollup node
+- Compress all the trxs inside a group of L2 blocks
+
+## Proposer + Fault Proofs + Challenge Agents
+- Proposer submits data about the L2 state to L1
+- after finalization period has passed, the data enables withdrawals
+- Fault proofs is what secure the bridge 
 
