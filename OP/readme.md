@@ -86,4 +86,17 @@
 - Settlement Layer
     - Multisig, Fault and ZKP
 
+## More digging into OP Stack!
 
+- Optimism is an EVM equivalent, optimistic rollup protocol designed to scale Ethereum while remaining maximally compatible with existing Ethereum infrastructure. 
+- Scaling Ethereum means increasing the number of useful transactions the Ethereum network can process.
+- Optimistic rollup is a layer 2 scalability technique which increases the computation & storage capacity of Ethereum without sacrificing security or decentralization. Transaction data is submitted on-chain but executed off-chain. If there is an error in the off-chain execution, a fault proof can be submitted on-chain to correct the error and protect user funds. In the same way you don't go to court unless there is a dispute, you don't execute transactions on on-chain unless there is an error.
+- EVM Equivalence is complete compliance with the state transition function described in the Ethereum yellow paper, the formal definition of the protocol. By conforming to the Ethereum standard across EVM equivalent rollups, smart contract developers can write once and deploy anywhere.
+- Optimism is an EVM equivalent, optimistic rollup protocol designed to scale Ethereum.
+- In order to scale Ethereum without sacrificing security, we must preserve 3 critical properties of Ethereum layer 1: liveness, availability, and validity.
+- Validity - All transactions must be correctly executed and all withdrawals correctly processed.
+    - The rollup state and withdrawals are managed on an L1 contract called the `L2OutputOracle`. 
+    - This oracle is guaranteed to only finalize correct (ie. valid) rollup block hashes given a single honest verifier assumption. 
+    - If there is ever an invalid block hash asserted on layer 1, an honest verifier will prove it is invalid and win a bond.
+
+  
