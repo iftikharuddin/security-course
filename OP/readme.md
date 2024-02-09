@@ -75,3 +75,15 @@
 - after finalization period has passed, the data enables withdrawals
 - Fault proofs is what secure the bridge 
 
+## Modular OP Stack | Optimism Summit 🔴✨ The Future of Ethereum - Karl Floersch (https://youtu.be/jlKPjiDu_KM)
+
+- Consesys Layer
+    - Rollup and Plasma
+    
+- Execution layer
+    - EVM MOVE
+    
+- Settlement Layer
+    - Multisig, Fault and ZKP
+
+
