@@ -98,5 +98,15 @@
     - The rollup state and withdrawals are managed on an L1 contract called the `L2OutputOracle`. 
     - This oracle is guaranteed to only finalize correct (ie. valid) rollup block hashes given a single honest verifier assumption. 
     - If there is ever an invalid block hash asserted on layer 1, an honest verifier will prove it is invalid and win a bond.
+    - There are two main ways to enforce validity of a rollup: fault proofs (optimistic rollup) and validity proofs (zkRollup). 
+- There are three actors in Optimism: users, sequencers, and verifiers.
+- Optimism supports two types of deposits: user deposits, and L1 attributes deposits. To perform a user deposit, users call the depositTransaction method on the OptimismPortal contract. This in turn emits TransactionDeposited events, which the rollup node reads during block derivation.
+- Without a sourceHash in a deposit, two different deposited transactions could have the same exact hash.
+- Both the L1 and L2 standard bridges should be behind upgradable proxies.
+-
+-
+-
+-
+-
 
   
