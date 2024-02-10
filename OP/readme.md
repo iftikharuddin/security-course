@@ -103,10 +103,57 @@
 - Optimism supports two types of deposits: user deposits, and L1 attributes deposits. To perform a user deposit, users call the depositTransaction method on the OptimismPortal contract. This in turn emits TransactionDeposited events, which the rollup node reads during block derivation.
 - Without a sourceHash in a deposit, two different deposited transactions could have the same exact hash.
 - Both the L1 and L2 standard bridges should be behind upgradable proxies.
--
--
--
--
--
+- No check if from is an Externally Owner Account (EOA): the deposit is ensured not to be an EAO through L1 address masking, this may change in future L1 contract-deployments to e.g. enable an account-abstraction like mechanism.
+
+## Withdrawal Flow
+
+- An L2 account sends a withdrawal message (and possibly also ETH) to the `L2ToL1MessagePasser` predeploy contract. This is a very simple contract that stores the hash of the withdrawal data.
+- After the withdrawal is proven, it enters a 7 day challenge period, allowing time for other network participants to challenge the integrity of the corresponding output root.
+- Once the challenge period has passed, a relayer submits a withdrawal finalizing transaction to the `OptimismPortal` contract. The relayer doesn't need to be the same entity that initiated the withdrawal on L2.
+- The `OptimismPortal` contract receives the withdrawal transaction data and verifies that the withdrawal has both been proven and passed the challenge period.
+- If the requirements are not met, the call reverts. Otherwise the call is forwarded, and the hash is recorded to prevent it from being replayed.
+
+## The L2ToL1MessagePasser Contract
+- A withdrawal is initiated by calling the L2ToL1MessagePasser contract's initiateWithdrawal function. The L2ToL1MessagePasser is a simple predeploy contract at 0x4200000000000000000000000000000000000016 which stores messages to be withdrawn.
+- The MessagePassed event includes all of the data that is hashed and stored in the sentMessages mapping, as well as the hash itself.
+  
+### Addresses are not Aliased on Withdrawals
+
+When a contract makes a deposit, the sender's address is aliased. The same is not true of withdrawals, which do not modify the sender's address. The difference is that:
+
+- on L2, the deposit sender's address is returned by the `CALLER` opcode, meaning a contract cannot easily tell if the call originated on L1 or L2, whereas
+- on L1, the withdrawal sender's address is accessed by calling the `l2Sender()` function on the `OptimismPortal` contract.
+- Calling l2Sender() removes any ambiguity about which domain the call originated from. Still, developers will need to recognize that having the same address does not imply that a contract on L2 will behave the same as a contract on L1.
+  
+### The Optimism Portal Contract
+- The Optimism Portal serves as both the entry and exit point to the Optimism L2. It is a contract which inherits from the OptimismPortal contract, and in addition provides the following interface for withdrawals:
+    - WithdrawalTransaction type
+    - OutputRootProof type
+    
+## Security Considerations
+- It should not be possible to 'double spend' a withdrawal, ie. to relay a withdrawal on L1 which does not correspond to a message initiated on L2. For reference, see this writeup of a vulnerability of this type found on Polygon.
+- For each withdrawal initiated on L2 (i.e. with a unique messageNonce()), the following properties must hold:
+    - It should only be possible to prove the withdrawal once, unless the `outputRoot` for the withdrawal has changed.
+    - It should only be possible to finalize the withdrawal once.
+    - Modifying the target, data, or value fields would enable an attacker to dangerously change the intended outcome of the withdrawal.
+    - Modifying the gasLimit could make the cost of relaying too high, or allow the relayer to cause execution to fail (out of gas) in the target.
+
+## Cross Domain Messengers
+
+- The L1 and L2 cross domain messengers should be deployed behind upgradable proxies. This will allow for updating the message version.
+
+## Standard Bridges
+- The standard bridges are responsible for allowing cross domain ETH and ERC20 token transfers. They are built on top of the cross domain messenger contracts and give a standard interface for depositing tokens.
+
+### Token Depositing
+- The `bridgeERC20` function is used to send a token from one domain to another domain. An `OptimismMintableERC20` token contract must exist on the remote domain to be able to deposit tokens to that domain. One of these tokens can be deployed using the `OptimismMintableERC20Factory` contract.
+- Both the L1 and L2 standard bridges should be behind upgradable proxies.
+  
+
+
+
+
+  
+
 
   
