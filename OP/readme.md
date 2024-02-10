@@ -149,7 +149,28 @@ When a contract makes a deposit, the sender's address is aliased. The same is no
 - The `bridgeERC20` function is used to send a token from one domain to another domain. An `OptimismMintableERC20` token contract must exist on the remote domain to be able to deposit tokens to that domain. One of these tokens can be deployed using the `OptimismMintableERC20Factory` contract.
 - Both the L1 and L2 standard bridges should be behind upgradable proxies.
   
+## Predeploys
+- Predeployed smart contracts exist on Optimism at predetermined addresses in the genesis state. They are similar to precompiles but instead run directly in the EVM instead of running native code outside of the EVM.
+- Predeploys are used instead of precompiles to make it easier for multiclient implementations as well as allowing for more integration with hardhat/foundry network forking.
+- Predeploy addresses exist in 1 byte namespace `0x42000000000000000000000000000000000000xx`. Proxies are set at each possible predeploy address except for the GovernanceToken and the ProxyAdmin.
+- The `LegacyERC20ETH` predeploy lives at a special address `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` and there is no proxy deployed at that account.
+- `WETH9` is the standard implementation of Wrapped Ether on Optimism. It is a commonly used contract and is placed as a predeploy so that it is at a deterministic address across Optimism based networks.
 
+## Points
+- To deposit a token from L1 to L2, the `L1StandardBridge` locks the token and sends a cross domain message to the `L2StandardBridge` which then mints the token to the specified account.
+- Any calls to the L1CrossDomainMessenger on L1 are serialized such that they go through the L2CrossDomainMessenger on L2.
+- The `relayMessage` function executes a transaction from the remote domain while the `sendMessage` function sends a transaction to be executed on the remote domain through the remote domain's `relayMessage` function.
+- To withdraw a token from L2 to L1, the user will burn the token on L2 and the `L2StandardBridge` will send a message to the `L1StandardBridge` which will unlock the underlying token and transfer it to the specified account.
+- The `L1BlockNumber` returns the last known L1 block number. This contract was introduced in the legacy system and should be backwards compatible by calling out to the `L1Block` contract under the hood.
+    - It is recommended to use the `L1Block` contract for getting information about L1 on L2.     
+- The `ProxyAdmin` is the owner of all of the proxy contracts set at the predeploys. It is itself behind a proxy. The owner of the ProxyAdmin will have the ability to upgrade any of the other predeploy contracts.
+  
+
+  
+  
+
+
+  
 
 
 
