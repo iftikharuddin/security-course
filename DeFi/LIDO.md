@@ -14,3 +14,11 @@
     - for this issue handling we have `wstETH` which essentially make it possible for stETH to continue increasing in value while maintaining a fix price for dex trading
     - when you stake ETH into LIDO it distributes it to 22 validators on ETH beacon chain that is vet by LIDO DAO
     - LDO token with 1 Billion Supply, is used in LIDO DAO voting
+    
+- WithdrawalQueueERC721
+    - This contract is a main entry point to exchange `stETH` for underlying ether directly via Lido protocol. It is responsible for:
+    - managing a queue of withdrawal requests
+    - committing withdrawal request finalization as a part of the AccountingOracle report
+    - storing `stETH` before and ether after the finalization
+    - transfer reserved ether to the user upon the claim
+
