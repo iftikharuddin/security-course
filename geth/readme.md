@@ -1,0 +1,16 @@
+# Private Blockchain Network
+- Part 1 - Build your Own Private Geth PoA Ethereum Network (Blockholic) - 4K Video
+- Part 2 - Why Building Private Ethereum Blockchain Network (Blockholic) - 4K Video
+    - Privacy
+- Part 3 - How are we going to Build our Private Geth PoA Blockchain Network (Blockhoic) - 4K Video
+    - Never create a network with even numbers of nodes, always create an odd number of nodes network :)
+- Part 4 - Prerequisites for building Private Geth Ethereum Blockchain Network (Blockhoic) 4K Video
+- Part 5 - Create Node 1 and Node 2 (Blockholic) 4K Video
+    - geth --datadir "./data" account new
+- Part 6 - Genesis Block Setup (Blockholic) 4K Video
+    - puppeth
+- Part 7 - Initializing Geth (Blockholic) 4K Video
+- Part 8 - Create Boot Node (Blockholic) 4K Video
+    - it connects to all the nodes and don't mine anything
+    - bootnode -genkey boot.key
+- Part 9 - Connect All Nodes (Blockholic) 4K Video
