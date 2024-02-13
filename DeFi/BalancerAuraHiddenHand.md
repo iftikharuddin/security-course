@@ -1,4 +1,6 @@
 # Balancer - Aura Finance - Hidden Hand - ecosystem $BAL, $AURA
+ [ref](https://youtu.be/1VQ3hdnn3yc)
+ 
 - Let say you have ETH and stETH from LIDO and you want to provide some liquidity to earn rewards instead of just holding this
 - One of the option is to go to `Balancer` and supply liquidity there
     - you can put both ETH and stETH in balancer or just one (its your choice) 
