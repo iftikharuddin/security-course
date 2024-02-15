@@ -1,6 +1,6 @@
 ## Balancer | Building on Balancer v2
 
-Ref ( https://youtu.be/ABbtYtMDhFA )
+Ref ( https://youtu.be/ABbtYtMDhFA ) (https://youtu.be/IX6rUhNC8uA)
 - on chain portfolio manager, dex
 - AMM with liquidity pools - guided by these principles
     - flexibility
@@ -14,6 +14,19 @@ Ref ( https://youtu.be/ABbtYtMDhFA )
     - Arbitrary pool AMM logic / tokenization
     - Arbitrary asset management logic
     - arbitrary flash loan logic
+- Vault interface
+    - Swap
+        - Single pool
+    - batchSwap
+        - Chained single swaps
+    - query batch swap
+        - swap simulator - same code, but reverts at the end with encoded data
+    - All swaps with pools are two-token, one balance increases, one decreases.
+    - Native ETH swaps/joins supported, included through the SOR
+    - joinPool/ExitPool
+        - add / remove liquidity
+        - any / combination of pool tokens
+- In uniswap, pancake and sushiswap allows only 2 assets deposits however balancer allows multi-asset deposits to pools
 
 ## Balancer - Aura Finance - Hidden Hand - ecosystem $BAL, $AURA
  [ref](https://youtu.be/1VQ3hdnn3yc)
