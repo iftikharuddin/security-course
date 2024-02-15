@@ -1,4 +1,21 @@
-# Balancer - Aura Finance - Hidden Hand - ecosystem $BAL, $AURA
+## Balancer | Building on Balancer v2
+
+Ref ( https://youtu.be/ABbtYtMDhFA )
+- on chain portfolio manager, dex
+- AMM with liquidity pools - guided by these principles
+    - flexibility
+    - extensibility
+    - gas efficiency
+    - simplicity - interface focused on UX
+    
+- An AMM Launch Platform
+    - Handles token storage, accounting, security (vault + core)
+    - Provides all essential infrastructure for flexible pool contracts
+    - Arbitrary pool AMM logic / tokenization
+    - Arbitrary asset management logic
+    - arbitrary flash loan logic
+
+## Balancer - Aura Finance - Hidden Hand - ecosystem $BAL, $AURA
  [ref](https://youtu.be/1VQ3hdnn3yc)
  
 - Let say you have ETH and stETH from LIDO and you want to provide some liquidity to earn rewards instead of just holding this
