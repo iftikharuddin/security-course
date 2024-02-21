@@ -10,3 +10,20 @@
 - Security First - The markets are secured using a dual oracle system, circuit breaker functionalities, and audits by notable firms to ensure utmost stability and user trust.
 - Modular Architecture - Curvance is built with composability in mind. The implementation of ERC-4626 vaults allows for a standardized approach and opens the opportunity for other parties to come in and build their solutions on top of Curvance.
 - Improved Tech Stack - The platform is built from the ground up featuring crosschain voting, liquidity routing, a custom liquidation engine, and improved tokenomics.
+
+## Money Market
+- Supply-Side
+    - Users deposit stablecoins and related ERC-20 tokens to Curvance, earning yield. 
+    - Only stablecoins can be borrowed, while other assets like LP tokens serve as collateral. 
+    - Interest rates depend on underlying asset yield and borrow demand.
+     
+- Demand-Side
+    - Users deposit long-tail assets for maximum yield.
+        - "Long-tail assets" typically refers to assets that have lower liquidity or are considered less mainstream compared to major or "short-head" assets. In the context of Curvance, it likely refers to a variety of assets beyond stablecoins, such as LP (liquidity provider) tokens and other less commonly traded tokens. These long-tail assets can be deposited to the platform for yield optimization and, in some cases, used as collateral for borrowing. 
+    - These assets can be used as collateral for borrowing.
+    - Collateral caps ensure on-chain liquidity and mitigate risks.
+    - Whitelisting allows users to enable assets as collateral and earn optimized yield.
+     
+     
+     
+     
