@@ -24,6 +24,8 @@
     - Collateral caps ensure on-chain liquidity and mitigate risks.
     - Whitelisting allows users to enable assets as collateral and earn optimized yield.
      
+## Oracles
+- Curvance will utilize a Dual Oracle system to increase protocol security. The oracles used will vary between Chainlink, Curve, UniV3, API3, Redstone, and more.
      
-     
-     
+    
+
