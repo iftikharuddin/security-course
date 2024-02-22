@@ -28,5 +28,12 @@
 - Curvance will utilize a Dual Oracle system to increase protocol security.
 - The oracles used will vary between Chainlink, Curve, UniV3, API3, Redstone, and more.
      
-    
+## Borrowing
+1. **Borrowing Limits:** User borrowing capacity depends on collateralization ratio and available liquidity; maximum borrowing determined by weighted blend of collateralization ratios across assets.
 
+2. **Health Factor:** Crucial metric indicating financial stability; calculated as Collateral Value / Borrowed Amount; Health Factor > 1 signals solvency, < 1 prompts proactive liquidation.
+    - Health Factor = Collateral Value / Borrowed Amount
+3. **Repayment Process:** To close a borrowing account, users must repay borrowed funds plus interest with the same asset; repayment can be done through the front end, contracts, or by zapping; collateral can be redeemed after repayment.
+
+## Liquidations
+- Liquidations on Curvance maintain market stability by triggering asset liquidation if collateral falls below the liquidation price, determined by collateralization ratio; Curvance's custom engine incrementally adjusts liquidation levels, balancing user-friendliness and risk, with socialized losses for any protocol bad debt.
