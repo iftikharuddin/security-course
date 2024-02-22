@@ -62,3 +62,6 @@
 
 ## Direct Gauge Emissions
 - Gauge Emissions allow approved pools on Curvance the ability to receive continuously streamed CVE rewards decided by the DAO.
+
+### **Call Options:**
+   - A financial instrument giving the holder the choice to buy an asset at a specified price within a set time, enabling potential profit if the asset's price rises.

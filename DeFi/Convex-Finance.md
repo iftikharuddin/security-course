@@ -1,0 +1,13 @@
+# Convex Finance
+- Convex Finance vs Yearn Finance Quick Contraster
+    - Convex Finance - Boosted Curve Staking
+        - purely focused on Curve Finanace
+        - it helps curve user to get more rewards and boosts
+        - the flow is like this, user stake in Curve -> they get LP tokens -> they use that LP tokens in Convex and stake it in Convex, this way you will get boosted rewards from everyone who supplied CRV to the respective pool
+        - Convex also supply you with with their gov tokens as rewards (CVX APR)
+        - Convex doesn't sell any token for you, it just boosts it -> gets you more CRV -> you will have to claim it!
+    - Yearn Finance
+        - YF also gives you boost rewards on the LP Tokens you staked however it doesn't give you GOV Tokens as Convex do!
+        - What YF can do is send the LP tokens to convex and farm the gov tokens convex gives :)
+        - YF sells the tokens directly for you and gets you USDC rewards.
+- ref video @ https://youtu.be/-CMPsfxEKwk 
