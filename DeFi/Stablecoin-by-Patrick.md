@@ -1,3 +1,7 @@
 # How to make a Stablecoin 
--
+- A stablecoin is a non-volatile crypto asset.
+- Stable buying power.
+- Summary is that a stable coin is a crypto asset whose buying power stays relatively the same.
+- MakerDAO (MKR) is Collateralized Debt Position (CDP)
+    - A collateralized debt position (CDP) is the position created by locking collateral in MakerDAO's smart contract to generate its decentralized stablecoin, DAI
 - ref @ https://youtu.be/8dRAd-Bzc_E
