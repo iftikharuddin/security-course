@@ -37,3 +37,28 @@
 
 ## Liquidations
 - Liquidations on Curvance maintain market stability by triggering asset liquidation if collateral falls below the liquidation price, determined by collateralization ratio; Curvance's custom engine incrementally adjusts liquidation levels, balancing user-friendliness and risk, with socialized losses for any protocol bad debt.
+
+## Crosschain Architecture
+- Curvance leverages Wormhole and its automatic relayers for its omnichain strategy and to power the omnichain gauge.
+
+## Crosschain Gauge System
+- Cross chain voting
+
+## veCVE
+- The CVE token can be converted to veCVE, which follows a modified voting escrow model. This means that CVE can be locked up to gain access to DAO voting power and other benefits.
+## Locking CVE for veCVE
+- By locking CVE as veCVE, a user will earn platform fees, voting power for gauge emissions, and potentially even bribes.  
+## Combining Locks
+- A user can also opt into combining and condensing their locks; this re-extends the locks back to full length and has the benefit of cleaning up a user's UI/UX interface. 
+
+## Rewards
+- Rewards will be distributed proportionally to holders of veCVE. For example, if there are 100 CVE in existence and 10 of them have been locked into veCVE. If you own 1 of those locked tokens, you will earn 15% of all fees generated on the platform.
+
+## veCVE-lock Migration Service
+- Using Wormhole, Curvance has enabled the option for users to move their CVE and veCVE tokens from one chain to the other.
+
+## Curvance DAO
+- The Curvance DAO is the governing entity of the protocol and controlled by the holders of veCVE.
+
+## Direct Gauge Emissions
+- Gauge Emissions allow approved pools on Curvance the ability to receive continuously streamed CVE rewards decided by the DAO.
