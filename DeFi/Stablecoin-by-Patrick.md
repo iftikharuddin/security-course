@@ -25,3 +25,12 @@
     - DAI is always less than your deposit ( bcz over-collateralized )
     - If you want to get your collateral back, you return the DAI which is burned and you get your ETH
     - Collateralized DEBT Position (CDP)
+    
+### Patrick Stable coin notes
+- (Relative Stability) Anchored or pegged -> $1.00
+    - Chainlink price feeds for fetching price data
+    - Set a function to exchange ETH & BTC -> $$$
+- Stability Mechanism (Minting) -> Algorithmic -> Decentralized
+    - People can only mint the stablecoin with enough collateral ( coded )
+- Collateral -> Exogenous -> Crypto
+    - wETH and wBTC as collateral
