@@ -34,3 +34,11 @@
     - People can only mint the stablecoin with enough collateral ( coded )
 - Collateral -> Exogenous -> Crypto
     - wETH and wBTC as collateral
+- So our stable coin will be decentralized and will be controlled by `Ownable` 
+- ERC20Burnable ( for maintaining the peg by burning tokens )
+    - burn balance must be more than 0
+    - amount should NOT be greater than user balance ( balance > amount is ok )
+- mint 
+    - to should not be zero addy
+    - amount should be greater than 0
+    
