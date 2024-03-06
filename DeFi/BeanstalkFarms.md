@@ -29,3 +29,16 @@
 ## Create Diamond Contracts In Your Browser Using Remix And Louper
 
 - [ https://youtu.be/8p4NhC9sLDA?list=PLlxGQpt_kNBdc_vVUF0XyVdi5c5WSWGII ]
+
+# Key concepts of Beanstalk
+- Seasons: Beanstalk measures time in Seasons, which target a duration of `1` hour. Each Season starts when
+  a call to function `gm` is performed. gm can be called once per Season, its cost in ETH compensated in BEAN
+  to whoever calls the function as an incentive that increases up to a maximum value provided to perform this
+  call.
+- Stalk system: A system meant to decentralize ownership over time and create Beanstalk-native financial
+  incentives to: align DAO voters’ interests with the health of Beanstalk; leave assets deposited in the Silo;
+  allocate liquidity in ways that benefit Beanstalk. Users receive Stalk by depositing whitelisted assets into the
+  Silo, giving them the right to earn a share of Bean seignorage and additional Grown Stalk which acts as a
+  anti-reflexive "sticking" incentive.
+- Mow: The action of converting Grown Stalk into Stalk. Each time a Stalkholder performs some action on
+  their Silo deposits, the corresponding Grown Stalk for that whitelisted asset is converted to Stalk
