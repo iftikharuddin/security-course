@@ -42,3 +42,6 @@
   anti-reflexive "sticking" incentive.
 - Mow: The action of converting Grown Stalk into Stalk. Each time a Stalkholder performs some action on
   their Silo deposits, the corresponding Grown Stalk for that whitelisted asset is converted to Stalk
+- Conversions in Beanstalk let users exchange assets without losing earned rewards, promoting flexibility while adhering to stability conditions.
+- Soil in Beanstalk is how much the system is okay with removing Beans from circulation to make the value of BEAN stable. When Beanstalk does this, it lends out debt in Pods and gets Beans in return.
+- Pods: Primary debt asset of Beanstalk that never expires, ordered in a list in the form of Plots.
