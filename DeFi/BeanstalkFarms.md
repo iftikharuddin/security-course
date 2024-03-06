@@ -1,6 +1,8 @@
 # BeanstalkFarms
 - https://twitter.com/BeanstalkFarms
 - prev audit [ https://github.com/solodit/solodit_content/blob/main/reports/Cyfrin/2023-06-16-Beanstalk%20wells.md ]
+- uses OpenZeppelin v3.4.0 but does not appear to be susceptible to any known security advisories.
+- implementing the EIP-2535 Diamond Proxy standard for modularity and upgrade flexibility
 
 # Beanstalk Part 1
 
@@ -45,3 +47,16 @@
 - Conversions in Beanstalk let users exchange assets without losing earned rewards, promoting flexibility while adhering to stability conditions.
 - Soil in Beanstalk is how much the system is okay with removing Beans from circulation to make the value of BEAN stable. When Beanstalk does this, it lends out debt in Pods and gets Beans in return.
 - Pods: Primary debt asset of Beanstalk that never expires, ordered in a list in the form of Plots.
+- Plots in Beanstalk are groups of Pods, and each Plot is labeled by the total number of Pods issued up to the moment it was created
+- "Sow" in Beanstalk means giving your Beans to the system in exchange for Pods through the Field. It's like lending your Beans to Beanstalk.
+- Temperature: Interest paid for lending beans to Beanstalk. This is used to calculate how many Pods should
+  be issued for a given amount of Beans.
+- Humidity: Interest rate paid for minting Fertilizer.
+- Rain: Rain is an event that occurs when the BEAN price is above `1` USD at the beginning of a Season and
+  the debt level is below `5%`.
+- A Flood, or Season of Plenty, in Beanstalk happens after several seasons of higher Bean prices. When the Bean price is consistently above $1, new Beans are created and sold for 3CRV to help bring the value back to $1. The rewards from this process are then shared among the Stalkholders based on their contributions.
+  
+  
+  
+  
+
