@@ -3,7 +3,7 @@
 - prev audit [ https://github.com/solodit/solodit_content/blob/main/reports/Cyfrin/2023-06-16-Beanstalk%20wells.md ]
 - uses OpenZeppelin v3.4.0 but does not appear to be susceptible to any known security advisories.
 - implementing the EIP-2535 Diamond Proxy standard for modularity and upgrade flexibility
-
+__
 # Beanstalk Part 1
 
 - Beanstalk is a permissionless fiat stablecoin protocol built on Ethereum. Its primary objective is to incentivize independent market participants to regularly cross the price of 1 Bean over its dollar peg in a sustainable fashion.
@@ -56,7 +56,11 @@
   the debt level is below `5%`.
 - A Flood, or Season of Plenty, in Beanstalk happens after several seasons of higher Bean prices. When the Bean price is consistently above $1, new Beans are created and sold for 3CRV to help bring the value back to $1. The rewards from this process are then shared among the Stalkholders based on their contributions.
   
-  
+## More info
+- If bean is above `1$` (in spikes/pomps), more beans are minted ... `50%` goes to stalk holder ... and 50% to the pod lines (debt holders)
+- Bean 3CRV
+    - this pool generates trading fees
+    - so if you stake directly into curve pool, you get lp tokens which u can put/stake in SILO but now you get to enjoy the silo perks + the curve pool perks also!
   
   
 
