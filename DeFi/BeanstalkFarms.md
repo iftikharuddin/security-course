@@ -62,5 +62,5 @@ __
     - this pool generates trading fees
     - so if you stake directly into curve pool, you get lp tokens which u can put/stake in SILO but now you get to enjoy the silo perks + the curve pool perks also!
   
-  
+ref https://youtu.be/570HgXHgRK0
 
