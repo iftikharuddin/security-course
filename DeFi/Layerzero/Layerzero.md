@@ -15,4 +15,13 @@ LayerZero is an open source protocol for building omnichain, interoperable appli
     
 ## Omnichain messaging
 
+- BY default, 200,000 gas is priced into adapterParams for simplicity, encoded as a bytes array:
+````  
+// v1 adapterParams, encoded for version 1 style, and 200k gas quote
+let adapterParams = ethers.utils.solidityPack(
+    ['uint16','uint256'],
+    [1, 200000]
+)
+````
+
 ref # https://youtu.be/NxbwTeYgWp0
