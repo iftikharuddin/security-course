@@ -14,5 +14,6 @@
 - now the problem is huff don't do function dispatching automatically for you as any other high level lang will do e.g Solidity
     - so in `huff` you will have to code and tell the compiler to do function dispatching
     - send calldata -> function dispatch -> function
+- Huff MAIN() Macro
 
 Ref: https://updraft.cyfrin.io/courses/formal-verification/introduction/presentation?lesson_format=video
