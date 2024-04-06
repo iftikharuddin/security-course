@@ -15,5 +15,8 @@
     - so in `huff` you will have to code and tell the compiler to do function dispatching
     - send calldata -> function dispatch -> function
 - Huff MAIN() Macro
+    - huffc project.huff (compile)
+    - huffc project.huff -b (return the byte code)
+- Smart Contract Bytecode
 
 Ref: https://updraft.cyfrin.io/courses/formal-verification/introduction/presentation?lesson_format=video
