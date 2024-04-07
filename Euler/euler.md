@@ -49,3 +49,15 @@ View videos on how to get started building out your own lending protocols, stabl
             - Which account is requisition the action
     - Vaults are responsible for authentication.
         - Is this account allowed to perform the action.
+        
+- Liquidation
+    - When a controller vault needs to liquidate, it impersonates the violator account:
+- EVC allows you to `multi-call`
+    - Users create `batches` which are list of calls.
+- Liquidity deferral
+    - Controller vaults are only asked if collateral is sufficient at the end of a batch. 
+    - This means that accounts can temporarily violate liquidity requirements, as long as they solve it by end of batch. 
+    - So leveraged positions can easily be setup with borrow, swap, deposit. 
+        - No looping or flash loans required.
+- CallThroughEVC
+    - With a callback pattern, vaults can always assume checks are deferred, simplifying implementation
