@@ -67,3 +67,9 @@ View videos on how to get started building out your own lending protocols, stabl
 ## Encode x Euler Educate: How to Integrate ERC-4626 vaults with the Ethereum Vault Connector
 - EVC: The EVC is an open source project designed to connect ERC-4626 and other types of vaults on ethereum to enable their use as collateral for one another.
 - ref: https://youtu.be/W4_KWOm3ql8
+
+## Encode x Euler Educate: Unique Features of the Ethereum Vault Connector
+- Controllers: When users want to borrow from a vault, they select it as their controller.
+- Collaterals: Each user selects a set of vaults to use as collateral.
+- A vault can be collateral as well as controller for diff users.
+- ref: https://youtu.be/D4ZRCT4g7DE
