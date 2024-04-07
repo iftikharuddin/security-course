@@ -14,4 +14,18 @@ View videos on how to get started building out your own lending protocols, stabl
 - Looping
 - Interest
 - Compounding
--
+- Carry Trade
+    - People with leveraged positions are both borrowers and depositors. They pay interest on borrows but earn interest on deposits.
+- ERC-4626 Tokenized Vault Standard
+    - A popular standard for contracts that implement yield-bearing vaults.
+- Shares 
+    - when you deposit into a vault, you receive shares.
+    - These shares are ERC-20 compataible tokens.
+     - If you perform no actions, the amount of shares you own doesn't change overtime.
+     - As interest occrues, each share is redeemable for growing quantity of the underlying asset.
+ - Exchange rate
+    - A vault's consist of it's cash (unloaned) and borrows (loaned out):
+    - assets = cash + totalBorrows
+    - As interest is occrued, `totalBorrows` increases over time. 
+    - Shares entitle holders to a proportional amount of the vault's assets
+    - exchangeRate = assets / totalShares
