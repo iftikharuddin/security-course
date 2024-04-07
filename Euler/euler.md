@@ -61,3 +61,5 @@ View videos on how to get started building out your own lending protocols, stabl
         - No looping or flash loans required.
 - CallThroughEVC
     - With a callback pattern, vaults can always assume checks are deferred, simplifying implementation
+
+- EVC is not compatible with account abstraction as per this video ( https://youtu.be/N10rNMG5l_w?t=2458 )
