@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/2024-02-Beanstalk-1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/5-t-swap-audit/lib/openzeppelin-contracts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Euler/euler-encode-workshop" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/basic-solc-project/lib/forge-std" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/basic-solc-project/lib/forge-std/lib/ds-test" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sc-exploits-minimized" vcs="Git" />

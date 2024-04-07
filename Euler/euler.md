@@ -63,3 +63,7 @@ View videos on how to get started building out your own lending protocols, stabl
     - With a callback pattern, vaults can always assume checks are deferred, simplifying implementation
 
 - EVC is not compatible with account abstraction as per this video ( https://youtu.be/N10rNMG5l_w?t=2458 )
+
+## Encode x Euler Educate: How to Integrate ERC-4626 vaults with the Ethereum Vault Connector
+- EVC: The EVC is an open source project designed to connect ERC-4626 and other types of vaults on ethereum to enable their use as collateral for one another.
+- ref: https://youtu.be/W4_KWOm3ql8
