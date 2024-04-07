@@ -4,7 +4,7 @@
 View videos on how to get started building out your own lending protocols, stable coins, yield aggregators, margin trading apps, and more on the EVC.
 
 - Workshop 1: Encode x Euler Educate: Ethereum Vault Connector as a Foundation Block for Modularity in DeFi
-    - https://youtu.be/N10rNMG5l_w
+    - Ref: https://youtu.be/N10rNMG5l_w
     
 ### Lending Markets
 - Lending markets are exchanges where money is swapped for time.
