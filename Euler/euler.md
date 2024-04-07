@@ -29,3 +29,23 @@ View videos on how to get started building out your own lending protocols, stabl
     - As interest is occrued, `totalBorrows` increases over time. 
     - Shares entitle holders to a proportional amount of the vault's assets
     - exchangeRate = assets / totalShares
+    
+## Problem
+- How do you prevent a user from withdrawing collateral after taking a borrow?
+    - Vaults must coordinate in some way ...
+- EVC (Ethereum Vault Connector)
+    - The EVC is designed to be easily integrated with any ERC-4626 vault.
+    - We've created a minimal integration layer that can be incorporated into most existing vault systems.
+
+- Vaults choose collaterals
+    - To allow borrowing, each vault chooses a set of vaults it accepts as collateral.
+    - The vault is trusting these collateral vaults to behave honestly and to integrate correctly with EVC. 
+    - If a vault doesn't accept any collaterals, no borrowing is allowed. 
+    - But this vault can still itself be used as `collateral`.
+    
+- Authn/Authz
+    - Separation of concerns: 
+        - EVC is responsible for authentication.
+            - Which account is requisition the action
+    - Vaults are responsible for authentication.
+        - Is this account allowed to perform the action.
