@@ -89,5 +89,17 @@ View videos on how to get started building out your own lending protocols, stabl
     - Similar to permits on ERC-20 tokens, but more general purpose than just setting an allowance. 
     - EIP-712 message schema. 
     - Smart contract wallets supported with ERC-1271
+    
+- Gasless transactions
+    - permit() enables UIs that don't require the users to create blockchain transactions. 
+    - Instead, users sign permit messages that send a "tip" to whoever executes them.
+    
+## Summary: Authentication
+- EVC authentication provides:
+    - Controller's access to collateral (for liquidations ). 
+    - Sub-Accounts: 256 virtual accounts for everyone. 
+    - Operators: General purpose grant to access accounts, often on a limited basis ( stop-losses, etc).
+    - Gasless transactions for EOAs and contract wallets (pay for gas with non-native assets, flexible resting order system.)
+    
 - ref: https://youtu.be/D4ZRCT4g7DE
 
