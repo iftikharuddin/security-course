@@ -95,8 +95,9 @@ View videos on how to get started building out your own lending protocols, stabl
     - Instead, users sign permit messages that send a "tip" to whoever executes them.
     
 ## Summary: Authentication
+
 - EVC authentication provides:
-    - Controller's access to collateral (for liquidations ). 
+    - Controller's access to collateral ( *for liquidations* ). 
     - Sub-Accounts: 256 virtual accounts for everyone. 
     - Operators: General purpose grant to access accounts, often on a limited basis ( stop-losses, etc).
     - Gasless transactions for EOAs and contract wallets (pay for gas with non-native assets, flexible resting order system.)
