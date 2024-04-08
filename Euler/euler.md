@@ -72,4 +72,22 @@ View videos on how to get started building out your own lending protocols, stabl
 - Controllers: When users want to borrow from a vault, they select it as their controller.
 - Collaterals: Each user selects a set of vaults to use as collateral.
 - A vault can be collateral as well as controller for diff users.
+    - One user can use vault as collateral for borrowing, another user can be borrowing from this vault setting as controller.
+- Sub-Accounts
+    - An account can only have one controller at a time, 
+    - therefore it can only have one borrow at a time.
+    
+- Operators
+    - Each sub-account can install one or more operators
+    - Operators can perform actions on behalf of the account
+- Status Checks 
+    - After a vault does an operation that affects a user's balance or debt, it should require an **account status check**
+    - similarly, after any operation that changes global state of the vault (ie total balances/debt) it should require a vault status check.
+    - at the appropriate time, the EVC will call back into the necessary vaults to verify account/vault statuses.
+- Permit
+    - The permit() method allows users to sign a batch and have someone else execute it on their behalf. 
+    - Similar to permits on ERC-20 tokens, but more general purpose than just setting an allowance. 
+    - EIP-712 message schema. 
+    - Smart contract wallets supported with ERC-1271
 - ref: https://youtu.be/D4ZRCT4g7DE
+
