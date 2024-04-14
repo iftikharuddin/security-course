@@ -39,3 +39,11 @@ Alright, let's break this down into simpler terms:
 - **Benefits for Borrowers:** Borrowers can use these shares to withdraw assets, even if they're more exotic or risky, because they're borrowing against the shares instead of the original assets.
 - **Advantages of Euler's System:** This kind of nested vault setup isn't common on other platforms, but Euler's modular design makes it not only possible but also safer and easier to manage. It allows users to take advantage of different types of assets and opportunities without adding risk for others.
 - **Future Potential:** These shares from Euler v2 can also be used in other types of protocols, which opens up possibilities for new ideas and innovations in the future.
+
+**Reward Streams:**
+- **What It Is:** Reward Streams is a system that lets projects give rewards to users of new markets without needing permission.
+- **How It Works:** It's like a tool that allows projects to send rewards to users automatically. These rewards can be in the form of different tokens.
+- **Key Feature:** Unlike traditional methods where users have to stake their tokens in a smart contract to get rewards, with Reward Streams, users can simply subscribe to get rewards without moving their tokens.
+- **Benefits for Users:** Users can earn rewards without locking up their tokens, which means they can still use them for other things like taking out loans.
+- **Dynamic Approach:** This system makes it easier for projects to incentivize users and keep them engaged in their platforms.
+- **Efficiency:** It's a more efficient way to reward users because they don't have to go through extra steps to receive their rewards.
