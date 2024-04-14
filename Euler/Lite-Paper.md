@@ -47,3 +47,12 @@ Alright, let's break this down into simpler terms:
 - **Benefits for Users:** Users can earn rewards without locking up their tokens, which means they can still use them for other things like taking out loans.
 - **Dynamic Approach:** This system makes it easier for projects to incentivize users and keep them engaged in their platforms.
 - **Efficiency:** It's a more efficient way to reward users because they don't have to go through extra steps to receive their rewards.
+
+**Fee Flow:**
+- **What It Is:** Fee Flow is a tool that allows the Euler DAO to manage fees collected from Euler markets in a more flexible and efficient way.
+- **Purpose:** It helps the DAO maximize growth of the Euler ecosystem by giving it control over how fees are used.
+- **How It Works:** Fee Flow works like a reverse auction. Periodically, it auctions off the fees collected, starting with a high price and gradually reducing it as more fees accumulate.
+- **Assets Accumulated:** The fees collected through Fee Flow can be used to accumulate assets like ETH, stETH, USDC, or even Euler's own token (EUL), giving the DAO more financial flexibility.
+- **Benefits for the DAO:** By using Fee Flow, the DAO can acquire assets or synthetic assets, which can create demand and help stabilize Euler's ecosystem.
+- **Vault Creator Involvement:** In Euler v2, creators of vaults can set fees. This allows them to earn passive income while also sharing a portion of the fees with the Euler DAO in a decentralized and efficient manner.
+- **Innovation:** This approach allows the DAO to convert fees from different assets into a single, accumulated token, making fee management more streamlined and effective.
