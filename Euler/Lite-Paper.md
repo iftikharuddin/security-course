@@ -88,3 +88,24 @@ Alright, let's break this down into simpler terms:
 - **Customization:** Developers can create their own operator smart contracts to implement specific strategies and offer them as separate products to users.
 - **Accessibility:** The EVC allows for easy access to its functionality for both externally owned accounts (EOAs) and smart contract wallets.
 - **Limitations and Solutions:** While the EVC allows only one outstanding liability at a time, it provides users with 256 virtual addresses (sub-accounts) to help manage risk efficiently without needing multiple separate wallets.
+
+**Direct Collateral from User's Wallet:**
+- **What It Is:** This is a method that allows users to use their tokens directly from their wallet as collateral without needing to deposit them into a vault first.
+- **ERC20Collateral Token:** This is an extension of the ERC20 token standard that ensures compatibility with the Euler Vault Chain (EVC).
+- **Benefits:** Using ERC20Collateral tokens unlocks new possibilities for combining different financial services. Users don't have to lock up their tokens in a vault, which means they retain their governance rights and other privileges associated with the tokens. It also helps users avoid unnecessary taxable events.
+- **How It Works:** When a user makes a transfer or burns tokens, the token contract checks with the EVC to make sure that the user's outstanding loan obligations are not violated. This check ensures that the user's account remains solvent.
+- **Batch Operations:** To streamline operations, transfers are batched together, and the account status check is performed at the end of the batch. This allows users to use their tokens freely within a batch as long as their account remains solvent by the end.
+- **Compatibility with EVC:** The ERC20Collateral token is compatible with the EVC's sub-account system, making it easy for users to manage their collateral within the EVC ecosystem.
+
+**Long-term Picture:**
+- DeFi is built on lending and borrowing digital assets, forming the foundation of capital markets.
+- Current lending protocols have limitations for borrowers and traders, leading to poor trading experiences.
+- Monolithic protocols restrict borrowing and punish traders with heavy fines, while isolated protocols offer flexibility but fragment liquidity.
+- These constraints push traders towards centralized platforms, reducing yields for DeFi lenders and liquidity in the ecosystem.
+
+**Euler v2 Solution:**
+- Aims to become the primary liquidity layer for DeFi by addressing these issues.
+- Offers modular architecture allowing permissionless creation of Edge vaults, connecting different vaults for flexibility.
+- Maintains security and risk management while enabling new yield opportunities.
+- Promises innovations like real-world assets, non-fungible tokens, and peer-to-peer lending.
+- Aims to become a global liquidity layer and a one-stop-shop for lending, borrowing, and trading on EVM-based networks.
