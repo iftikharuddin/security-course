@@ -56,3 +56,11 @@ Alright, let's break this down into simpler terms:
 - **Benefits for the DAO:** By using Fee Flow, the DAO can acquire assets or synthetic assets, which can create demand and help stabilize Euler's ecosystem.
 - **Vault Creator Involvement:** In Euler v2, creators of vaults can set fees. This allows them to earn passive income while also sharing a portion of the fees with the Euler DAO in a decentralized and efficient manner.
 - **Innovation:** This approach allows the DAO to convert fees from different assets into a single, accumulated token, making fee management more streamlined and effective.
+
+**Free Market Liquidations:**
+- **What It Is:** Free Market Liquidations is a feature in Euler v2 that allows advanced vault creators to customize how assets are liquidated when needed.
+- **Standard Option:** As a default option, Euler v2 includes a liquidation process called the reverse Dutch auction, which was first introduced in Euler v1.
+- **How It Works:** In this process, when assets need to be liquidated (sold off), a reverse auction is held. This means the price starts high and decreases over time. It's designed to be fair and efficient.
+- **Benefits:** This process was well-liked by users in Euler v1 because it offered low bonuses for those who help with liquidations, making it cheaper compared to other DeFi lending platforms. This helps protect both borrowers and lenders by ensuring the stability of the lending pools.
+- **Protection for Borrowers:** Lower bonuses mean borrowers don't have to pay as much to bots (MEV bots) during liquidations, which is beneficial for them.
+- **Overall Goal:** The goal is to ensure that the lending system remains stable and fair for everyone involved, promoting trust and reliability within the Euler ecosystem.
