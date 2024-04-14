@@ -64,3 +64,27 @@ Alright, let's break this down into simpler terms:
 - **Benefits:** This process was well-liked by users in Euler v1 because it offered low bonuses for those who help with liquidations, making it cheaper compared to other DeFi lending platforms. This helps protect both borrowers and lenders by ensuring the stability of the lending pools.
 - **Protection for Borrowers:** Lower bonuses mean borrowers don't have to pay as much to bots (MEV bots) during liquidations, which is beneficial for them.
 - **Overall Goal:** The goal is to ensure that the lending system remains stable and fair for everyone involved, promoting trust and reliability within the Euler ecosystem.
+
+## Ethereum Vault Connector (EVC)
+
+**Euler Vault Chain (EVC):**
+- **What It Is:** The EVC is like a bridge that connects different vaults within the Euler ecosystem. It's a powerful tool that makes it easy for vault creators to create new lending products.
+- **Interoperability:** It allows vaults to work together and recognize deposits in distant vaults as collateral. This means assets deposited in one vault can be used as collateral in another, even if they're far apart.
+- **Open-Source:** The EVC is open-source, which means it's available for anyone to use and build products on. You can find more information about it in the white paper and development documentation.
+- **Simplifying Development:** One of its main goals is to simplify the development process for creators by handling common features found in credit-based protocols. This lets developers focus on creating unique features tailored to specific users.
+- **Encouraging Innovation:** By abstracting away these common features, the EVC encourages developers to create new lending protocols, stablecoins, yield aggregators, margin trading apps, and more.
+- **Support for Various Assets:** In the long run, the EVC is expected to support a wide range of assets beyond just ERC20 tokens, including irregular asset classes like real-world assets (RWAs), non-fungible tokens (NFTs), IOUs, and synthetic assets.
+- **Benefits for the Ecosystem:** As more vaults are designed to work with the EVC, it expands the Euler ecosystem, giving lenders and borrowers more flexibility. This can lead to higher yields and stronger network effects over time.
+
+**Account Managers:**
+- **What They Are:** Account Managers are like assistants that help users manage their accounts and make trades more efficiently.
+- **Features Provided:** For developers using the EVC, it offers several important features right out of the box. These include:
+  - Multicall-like batching: This allows multiple actions to be bundled together and executed in a single transaction, saving time and gas fees.
+  - Flash liquidity: This enables quick refinancing of loans, making trading more efficient.
+  - Simulations: Users can simulate trades before executing them to see potential outcomes.
+  - Gasless transactions: Users can perform transactions without needing to pay gas fees directly.
+- **Operator Smart Contracts:** One powerful feature of the EVC is the ability to use operator smart contracts. These contracts, also known as operators, can act on behalf of users and perform various tasks like advanced trading and risk management strategies.
+- **Examples of Use Cases:** Account Managers can implement strategies like stop-loss and take-profit orders, custom liquidation flows, and intent-based systems to automate trading and risk management.
+- **Customization:** Developers can create their own operator smart contracts to implement specific strategies and offer them as separate products to users.
+- **Accessibility:** The EVC allows for easy access to its functionality for both externally owned accounts (EOAs) and smart contract wallets.
+- **Limitations and Solutions:** While the EVC allows only one outstanding liability at a time, it provides users with 256 virtual addresses (sub-accounts) to help manage risk efficiently without needing multiple separate wallets.
