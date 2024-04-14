@@ -40,3 +40,23 @@
 - Instead of embedding rewards directly into vault contracts, balance forwarding notifies an external contract of balance changes, chosen by the vault governor. 
 - This approach offers instant and trustless reward distribution without increasing gas costs for all users. 
 - However, the chosen external contract, typically Rewards Streams, must be audited to ensure reliability and gas efficiency.
+
+# Audit data
+
+## Privileged actors
+Accounts owners
+- **Description**: An Ethereum address that controls a total of 256 EVC accounts.
+- **Permissions**: setNonce, setOperator, setAccountOperator, enableCollateral, disableCollateral
+, reorderCollaterals, enableController, disableController, permit, call, batch.
+- **Trusted by**: The corresponding 256 EVC accounts determined by the owner’s 19 left-most bytes.
+
+## Account operators
+- **Description**: An address approved to execute a set of functions on behalf of a given EVC account.
+- **Permissions**: Same as account owners except setNonce and setOperator.
+- **Trusted by**: EVC accounts.
+
+## Controller vaults
+- **Description**: The borrowed-from (liability) vaults.
+- **Permissions**: controlCollateral, forgiveAccountStatusCheck, disableController, and
+functions related to the account and vault status checks.
+- **Trusted by**: Collateral vaults (and vice versa).
