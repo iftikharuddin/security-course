@@ -26,3 +26,17 @@
 - **Calculation:** The exchange rate is computed by dividing the total assets (cash + total borrows) by the total number of shares.
 - **Precision Consideration:** To avoid precision loss, the exchange rate calculation incorporates a "virtual deposit," which is like a deposit at a 1:1 exchange rate, ensuring a defined exchange rate even when there are no outstanding shares initially.
 - **Equation:** Exchange Rate = (Cash + Total Borrows + Virtual Deposit) / (Total Shares + Virtual Deposit)
+
+**When a depositor wants to withdraw assets from the vault:**
+- The quantity of assets they can redeem for a given number of shares is always `rounded down`. This ensures that depositors cannot withdraw more assets than they originally deposited plus any interest earned.
+- Conversely, the number of shares required to withdraw a given quantity of assets is `rounded up`. This ensures that depositors cannot withdraw fewer assets than they are entitled to based on their shares.
+
+### DToken
+- The DToken is a read-only ERC-20 interface provided by vaults to represent debts owed within the system. It allows for clear tracking of debt modifications, triggering Transfer logs whenever a debt amount changes. These logs represent the net change in debt, which includes repayments and accrued interest. While the DToken contract doesn't support transfers or approvals, advanced users seeking debt portability can utilize the pullDebt() function on the vault contract, provided the controller vault allows it.
+- The DToken contract is the first (and only) contract created by EVault, so its address can be calculated from the vault's address and the nonce 1.
+
+### Balance Forwarding
+- Balance forwarding is a method used to incentivize liquidity providers beyond interest earnings.
+- Instead of embedding rewards directly into vault contracts, balance forwarding notifies an external contract of balance changes, chosen by the vault governor. 
+- This approach offers instant and trustless reward distribution without increasing gas costs for all users. 
+- However, the chosen external contract, typically Rewards Streams, must be audited to ensure reliability and gas efficiency.
