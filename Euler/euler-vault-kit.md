@@ -13,7 +13,7 @@
 - **Risks of Immutable/Finalised Vaults:**
   - Inability to reconfigure in response to changing market conditions or critical bugs.
 - **Security Upgrade Policy:**
-  - Factory admins should have a clear policy for security upgrades and evaluate their impact responsibly.
+  - Factory admins should have a clear policy for security upgrades & evaluate their impact responsibly.
 - **Challenge for Factory Admins:**
   - Fixing bugs for upgradeable vaults without exposing vulnerabilities in non-upgradeable ones requires careful consideration and security measures.
   
@@ -60,3 +60,4 @@ Accounts owners
 - **Permissions**: controlCollateral, forgiveAccountStatusCheck, disableController, and
 functions related to the account and vault status checks.
 - **Trusted by**: Collateral vaults (and vice versa).
+
