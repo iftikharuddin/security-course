@@ -89,6 +89,15 @@ The Ethereum Vault Connector (EVC) employs risk management measures by requiring
 
 These methods are called by the EVC as needed, often after completing all operations in a batch. This allows for deferred checks, providing a form of flash liquidity. If a vault indicates a failed status check, the transaction is reverted, undoing all previously executed operations.   
 
+### Max LTV
+Maximum Loan To Value ratios (LTVs) determine how much someone can borrow against their collateral assets.
+
+The governor of the liability vault decides these ratios, which should be chosen carefully based on the risk of the assets and the safety of the vault.
+
+To set the LTV for a collateral asset, the governor uses the `setLTV()` method, specifying a fraction between `0` and `1` (scaled by 10,000).
+ 
+This fraction represents the risk adjustment applied to the collateral when checking if an account is violating its LTV. While each account can only have one liability, a loan can be backed by multiple collaterals.
+
 # Audit data
 
 ## Privileged actors
