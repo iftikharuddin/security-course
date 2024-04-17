@@ -76,3 +76,15 @@ owned by that user will also be compromised.
   do not affect an account’s solvency. This abstract approach allows controller vaults to craft more
   customized rules
 - Disabling a controller in the EVC requires the call to come from the controller itself, not the user.
+- During an external call, any address can insert itself into the account and vault status check sets
+  if checks are deferred, potentially forcing the transaction to revert.
+- Precompiles cannot be used as addresses for permit, but the validation logic should change if
+the contract is deployed on other chains.
+- The `getPermitHash` functions writes into the Free Memory Pointer slot but clears it right after.
+- The EVC is written in a highly abstracted manner to allow flexibility and avoid making specific
+  assumptions about vaults implementations.
+
+
+## Tips
+- Whenever an operation affects an account’s solvency in a controller vault, the Ethereum
+ Vault Connector triggers the `checkAccountStatus` function in the respective controller vault(s)
