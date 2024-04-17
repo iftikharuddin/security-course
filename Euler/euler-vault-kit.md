@@ -98,6 +98,17 @@ To set the LTV for a collateral asset, the governor uses the `setLTV()` method, 
  
 This fraction represents the risk adjustment applied to the collateral when checking if an account is violating its LTV. While each account can only have one liability, a loan can be backed by multiple collaterals.
 
+### Account Health
+
+Simply put, for an account to be healthy, the total value of its collateral assets, adjusted for their Loan To Value ratios (LTVs), must be greater than the value of its liabilities. Alternatively, if the account has no liabilities at all, it's considered healthy. If an account doesn't meet these criteria, it's in violation and may face liquidation.
+
+Here's an example: Let's say an account has two collateral assets, C1 and C2, valued at 10 ETH and 5 ETH respectively. The LTVs set by the liability vault's governor are 0.5 for C1 and 0.8 for C2. The risk-adjusted value of the account's collateral is calculated as (10 * 0.5) + (5 * 0.8) = 9 ETH. If the account's liability value is 9 ETH or higher, the account is in violation.
+
+To determine an account's health, the liability vault calculates the risk-adjusted value of the account's collateral assets and compares it to the liability value. It stops the calculation once the collateral value exceeds the liability value, saving gas. Users can optimize collateral order using functions like `reorderCollaterals` to further improve efficiency.
+
+If an asset doesn't have an assigned LTV or the LTV is set to 0, it doesn't contribute to the account's risk-adjusted collateral value.
+
+
 # Audit data
 
 ## Privileged actors
