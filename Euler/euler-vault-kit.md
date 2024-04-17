@@ -69,3 +69,10 @@ the address. While this reduces the security of addresses by 8 bits, there remai
 security margin. It’s important to note that if a user’s private key is compromised, all accounts
 owned by that user will also be compromised.
 - Owners can set the operator address for any account, whereas operators can only unset themselves from accounts they’ve been assigned to.
+- Sequentially signed permit messages can be invalidated simultaneously if the owner updates
+  the nonce for the corresponding nonce namespace.
+- Collateral vaults should trust controller vaults, and vice versa
+- Account status checks are required even in `reorderCollateral` and `enableCollateral`, which
+  do not affect an account’s solvency. This abstract approach allows controller vaults to craft more
+  customized rules
+- Disabling a controller in the EVC requires the call to come from the controller itself, not the user.
