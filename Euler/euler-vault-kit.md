@@ -41,6 +41,45 @@
 - This approach offers instant and trustless reward distribution without increasing gas costs for all users. 
 - However, the chosen external contract, typically Rewards Streams, must be audited to ensure reliability and gas efficiency.
 
+### Interest
+
+- **Interest:** In the context of the system, interest is accrued on borrowed amounts and earned on deposited amounts.
+
+- **Compounding:** Compounding refers to the process where interest is calculated on both the principal amount and any accumulated interest from previous periods. In this system, vaults compound interest deterministically every second using exponentiation, which means they calculate interest based on the continuously growing balance including previously accrued interest.
+
+- **Deterministic Compounding:** Vaults compound interest using exponentiation, which means they calculate interest precisely rather than using an approximation method like polynomial approximation. This ensures that the amounts owed or earned are accurate and independent of how frequently the contract is interacted with, except for interactions that result in changes to the interest rate or accumulator rounding.
+
+- **Accumulation of Interest:** Interest is accumulated on the first transaction in a block, meaning that actual time must pass for any interest to be accrued. However, whenever the balance or debt amounts change, a new interest rate is targeted. This process occurs in the `checkVaultStatus` function, ensuring that batches of transactions interacting with a vault multiple times only need to re-target the interest rate once. This helps optimize the efficiency of interest rate adjustments.
+
+### Interest Rate Models (IRMs)
+
+Interest Rate Models (IRMs) are contracts used by vaults to determine the interest rates borrowers must pay based on the vault's state. The most common model is the "linear-kink" model, which adjusts interest rates based on the utilization of the vault's assets.
+
+IRMs calculate interest rates using functions like `computeInterestRate`, which takes utilization as input. They can also request additional information from the vault.
+
+Interest rates are typically measured in "second percent yield" (SPY) values, which represent per-second compounded interest rates.
+
+When a vault has `address(0)` installed as an IRM, an interest rate of `0%` is assumed. If a call to the vault's IRM fails, the vault will ignore this failure & continue with the previous interest rate.
+
+While most IRMs are simple functions, vaults may directly call them to update interest rates. IRMs must ensure that the caller is the vault and also provide a method called computeInterestRateView for getting updated rates without changing state.
+
+### Fees
+When interest is accrued in the vault, a portion of it is allocated to fees, similar to reserves in other protocols. The governor sets the `interestFee` parameter, controlling the fraction of interest allocated to fees. Each borrower's liability increases accordingly with interest fees. Fees are charged by diluting depositors' shares by the `interestFee` fraction of the interest. These fees, denominated in vault shares, earn compound interest over time.
+
+To efficiently track fees, they are stored in a virtual account within the vault. A `convertFees()` method can be called to convert these fees into regular shares redeemable for the underlying asset. This method calculates the newly accrued shares since the last call & determines the portion due to the Euler DAO & its receiver address. The remaining shares are transferred to the `feeReceiver` address specified by the vault's governor, or to the Euler DAO's receiver if no `feeReceiver` is specified.
+
+### ProtocolConfig
+The ProtocolConfig contract represents the Euler DAO's interests within the vault kit ecosystem and regulates the control that vaults allow it. It sets limits on what actions can be controlled by the DAO, with permanent enforcement for non-upgradeable vaults.
+
+ProtocolConfig exposes two key methods for vault interaction:
+
+1. isValidInterestFee(): Validates whether an interest fee value falls within the allowed range (10% to 100%). Vaults call this method when the governor attempts to set an interest fee.
+
+2. feeConfig(): Called during fee conversion, it returns:
+   - feeReceiver: The address where the DAO's share of the fees should be sent.
+   - protocolFeeShare: The fraction of interest fees allocated to the DAO. If this value exceeds 50%, vaults use 50% instead.
+   
+   
 # Audit data
 
 ## Privileged actors
