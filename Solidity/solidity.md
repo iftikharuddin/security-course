@@ -5,3 +5,4 @@
     - Gas saving
     - Use of assembly e.g tstore, tload etc 
     - ref - https://youtu.be/0-hiB5I39Mk
+    - https://eips.ethereum.org/EIPS/eip-1153

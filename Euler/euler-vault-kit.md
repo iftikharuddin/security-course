@@ -61,3 +61,11 @@ Accounts owners
 functions related to the account and vault status checks.
 - **Trusted by**: Collateral vaults (and vice versa).
 
+## Design choices
+- The EVC implements a custom TransientStorage contract. If EIP-1153 gets accepted, and transient storage becomes natively supported by the EVM before the project launches, this code
+may be rewritten.
+- Each Ethereum address has a total of 256 accounts in the EVC distinguished by the last 1 byte of
+the address. While this reduces the security of addresses by 8 bits, there remains a comfortable
+security margin. It’s important to note that if a user’s private key is compromised, all accounts
+owned by that user will also be compromised.
+- Owners can set the operator address for any account, whereas operators can only unset themselves from accounts they’ve been assigned to.
