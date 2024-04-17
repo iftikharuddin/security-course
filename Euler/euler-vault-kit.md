@@ -80,6 +80,15 @@ ProtocolConfig exposes two key methods for vault interaction:
    - protocolFeeShare: The fraction of interest fees allocated to the DAO. If this value exceeds 50%, vaults use 50% instead.
    
    
+### Risk Management
+The Ethereum Vault Connector (EVC) employs risk management measures by requiring vaults to implement two essential methods:
+
+1. checkAccountStatus: This method checks whether a specified account is in violation. It verifies if the account has enough collateral to cover its liabilities.
+
+2. checkVaultStatus: This method assesses the overall health of the vault itself. It examines if the vault has surpassed any predefined limits, such as borrow and supply caps.
+
+These methods are called by the EVC as needed, often after completing all operations in a batch. This allows for deferred checks, providing a form of flash liquidity. If a vault indicates a failed status check, the transaction is reverted, undoing all previously executed operations.   
+
 # Audit data
 
 ## Privileged actors
