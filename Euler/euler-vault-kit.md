@@ -107,10 +107,47 @@ Here's an example: Let's say an account has two collateral assets, C1 and C2, va
 To determine an account's health, the liability vault calculates the risk-adjusted value of the account's collateral assets and compares it to the liability value. It stops the calculation once the collateral value exceeds the liability value, saving gas. Users can optimize collateral order using functions like `reorderCollaterals` to further improve efficiency.
 
 If an asset doesn't have an assigned LTV or the LTV is set to 0, it doesn't contribute to the account's risk-adjusted collateral value.
+
 ### Untrusted Collaterals
 
 Using secure vaults as collateral is crucial for vault safety. Vaults with risky assets or configurations can endanger depositors. Evaluating vault smart contract code is vital to avoid malicious behavior. Stick to vaults from reputable factories and verify new vault implementations. Ensure transfer methods don't call external contracts to prevent attacker exploits. Assets without an LTV are not liquidated to prevent vulnerabilities from untrusted vaults.
 
+### LTV Ramping
+
+LTV Ramping allows the governor to adjust the Loan To Value (LTV) ratio for collateral assets in a gradual manner. If the LTV is suddenly reduced, borrowers may be unfairly penalized, as they could instantly be put in violation and lose value due to liquidation. 
+
+To address this, EVaults offer a solution: when changing the allowed LTV, the governor can specify a ramp duration. During this period, new borrows must use the new LTV immediately, but the LTV for liquidations will gradually change to the new value over the specified duration. This ensures fairness for both existing and new borrowers, minimizing losses during liquidation.
+
+Even vaults that are already finalized could benefit from LTV Ramping by implementing a limited governor contract. This contract could initiate a smooth closure of the vault under specific conditions, providing additional protection and flexibility.
+
+### Supply and Borrow Caps
+
+Supply and Borrow Caps are limits set by the governor on the amount of assets that can be deposited into the vault (supply cap) and the amount that can be borrowed (borrow cap). These caps are specified in the underlying asset and are represented as 2-byte decimal floating point values.
+
+These caps are enforced at the end of a batch, meaning that transactions violating the caps will be reverted if they are in violation at the end of the batch. However, they can be transiently violated during the batch execution process.
+
+In some cases, caps can be persistently violated, such as when the governor reduces them or if accrued interest causes the total borrowed amount to exceed the borrow cap. In these cases, transactions that reduce or do not change the supply or borrowed amounts will not be reverted, even if the caps are still in violation at the end of the batch.
+
+It's important to note that this behavior can potentially be exploited by wrapping gasless transactions that withdraw or repay into a surrounding batch that deposits or borrows an equivalent amount. This allows the executor to transfer the user's supply or borrow quota into their own account instead of reducing the capped value.
+
+### Hooks
+Hooks in vaults allow for specific actions to be triggered before or after certain operations, providing a way to customize and control the behavior of the vault. Here's a breakdown of how hooks work:
+
+1. **Hook Configuration**: The vault governor sets up a hook configuration, which includes two main parameters: the hook target (the contract to call) and the hooked operations (the operations affected by the hooks).
+
+2. **Operation Check**: When a user invokes a function on the vault, the vault checks if the operation corresponds to any of the hooked operations specified in the hook configuration.
+
+3. **Hook Target Call**: If the operation matches a hooked operation, the vault calls the hook target contract specified in the configuration. It passes along the same data provided to the vault's function call, along with information about the caller.
+
+4. **Failure Handling**: If the call to the hook target fails, the vault operation also fails. If the hook target is set to `address(0)`, the operation fails unconditionally.
+
+5. **Additional Hooking**: Besides user-invokable functions, hooks can also be set on `checkVaultStatus`, which is called at the end of a batch interacting with the vault. This can be used to reject operations that violate certain conditions.
+
+6. **Bypassing Reentrancy Protection**: Hook functions can call view methods on the vault because the hook target bypasses the vault's read-only reentrancy protection. However, they cannot perform state-changing operations due to the normal reentrancy lock.
+
+7. **Use Cases**: Hooks can be used for various purposes, such as implementing pause guardians, restricting access to certain vault operations, enforcing fees for flash loans, setting utilization caps, defining minimum debt sizes, and more. These use cases help customize the behavior of the vault to meet specific requirements or constraints.
+
+In simpler terms, hooks allow the vault to call external contracts before or after certain actions, providing a way to customize how the vault behaves and adding extra functionality or restrictions as needed.
 # Audit data
 
 ## Privileged actors
