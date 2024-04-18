@@ -107,7 +107,9 @@ Here's an example: Let's say an account has two collateral assets, C1 and C2, va
 To determine an account's health, the liability vault calculates the risk-adjusted value of the account's collateral assets and compares it to the liability value. It stops the calculation once the collateral value exceeds the liability value, saving gas. Users can optimize collateral order using functions like `reorderCollaterals` to further improve efficiency.
 
 If an asset doesn't have an assigned LTV or the LTV is set to 0, it doesn't contribute to the account's risk-adjusted collateral value.
+### Untrusted Collaterals
 
+Using secure vaults as collateral is crucial for vault safety. Vaults with risky assets or configurations can endanger depositors. Evaluating vault smart contract code is vital to avoid malicious behavior. Stick to vaults from reputable factories and verify new vault implementations. Ensure transfer methods don't call external contracts to prevent attacker exploits. Assets without an LTV are not liquidated to prevent vulnerabilities from untrusted vaults.
 
 # Audit data
 
