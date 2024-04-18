@@ -248,6 +248,39 @@ This is a vault that allows users to deposit assets and earn interest in the sam
 **PegStabilityModule:**
 This module is granted minting rights for a synthetic asset and facilitates fee-free conversion between the synthetic asset and the underlying asset it's pegged to. Fees collected during swaps serve as a reserve to maintain the peg. There are limits on how much can be swapped based on the assets held by the module.
 
+## More on EVK
+
+Interaction patterns:
+
+**Swapping:**
+- Instead of having a special field for expiration in functions like swaps, we can now use the EVC batch mechanism.
+- The batch can include a call to a helper contract that checks if the current time is past a specified expiration time.
+- Swaps can be executed directly through the EVC's call mechanism or delegated to a "swap helper" contract without the need for the EVC or vault to know about swapping details.
+
+**EVC Operators:**
+- EVC Operators allow delegation of account control to another address, usually a specialized smart contract.
+- They can be used for actions like opening, modifying, or closing positions based on on-chain indicators.
+- For example, a stop-loss order can be placed by a keeper to close a position when a specific price level is reached.
+
+**Gasless Transactions:**
+- Gasless transactions are signed messages specifying a batch of operations a user wants to execute.
+- To compensate for gas costs, a contract can be set up where users store their address and invoke a callback.
+- The executor places their address in this contract and evaluates the user's batch within the callback.
+- Gasless transactions can compensate the executor with any token, including vault shares.
+
+**Unified Keepers:**
+- The EVC and Euler Vault system are designed to unify keeper activities.
+- A single bot can perform various tasks like liquidations, gasless transactions, conditional orders (e.g., stop-loss, take-profit), and updating order states.
+- This allows for the creation of advanced trading systems that search for value across different activities efficiently.
+
+### ERC-4626 Incompatibilities
+Although the Euler Vault Kit attempts to conform to the ERC-4626 standard as closely as possible, there are some circumstances and configurations where it is known to be incompatible:
+
+- When an account has a controller enabled (ie, has an active borrow), calling maxWithdraw and maxRedeem on the account's collateral vaults will return 0. This is because it is technically challenging to determine the maximum withdrawable amount that will not cause a health violation. This behaviour violates the standard's requirement that these functions "MUST return the maximum amount [that will] not cause a revert". However, the standard does allow the vault to underestimate and this could be regarded as an extreme underestimation.
+- Similarly, maxDeposit and maxMint take into account the vault's supply caps. However, when checks are deferred, an amount in excess of these caps can temporarily be deposited and these functions do not take this into account. Again, this is an underestimation which is allowed by the standard.
+- The standard's max* functions may be inaccurate if hooks are installed. In this case, these functions will return the value that the vault code would normally return, without accounting for the fact that the hook may revert the transaction according to its own custom logic. However, if the hook target is address(0) (or any other non-contract), hooked operations will correctly return 0.
+- The standard says some view functions (totalAssets, convertToShares, maxDeposit, etc) "MUST NOT revert". However, the Vault Kit enforces read-only reentrancy protection for these (and other) functions in order to prevent external contracts from viewing inconsistent state during a vault operation. So, by design, when a vault operation is in progress, if the vault calls an external contract and it (or something it calls) tries to call these functions on the vault they will revert.
+
 # Audit data
 
 ## Privileged actors
