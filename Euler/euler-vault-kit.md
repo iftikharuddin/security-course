@@ -148,6 +148,21 @@ Hooks in vaults allow for specific actions to be triggered before or after certa
 7. **Use Cases**: Hooks can be used for various purposes, such as implementing pause guardians, restricting access to certain vault operations, enforcing fees for flash loans, setting utilization caps, defining minimum debt sizes, and more. These use cases help customize the behavior of the vault to meet specific requirements or constraints.
 
 In simpler terms, hooks allow the vault to call external contracts before or after certain actions, providing a way to customize how the vault behaves and adding extra functionality or restrictions as needed.
+
+### Price Oracles
+
+In a vault system, each collateral is represented by shares in another vault, not the actual underlying asset. This means that the value of a user's collateral is determined by the value of the vault's shares, which may not directly correspond to the value of the underlying asset due to exchange rates.
+
+To determine the value of shares in terms of the underlying asset, a price oracle is used. The price oracle is responsible for converting the quantity of shares into amounts of the underlying asset. This conversion is crucial for pricing operations within the vault.
+
+For vaults created with the Euler Vault Kit, the `convertToAssets` function can be used to price shares in terms of the underlying asset. This function is designed to be reliable, with protections against manipulation and rounding-based errors.
+
+In some cases, especially in cross-chain designs, the price oracle may also determine the exchange rate of a corresponding vault on a different blockchain.
+
+The price oracle used by each vault must implement the `IPriceOracle` interface, which includes two main functions: `getQuote` and `getQuotes`. These functions calculate the price of the base token (shares) in terms of the quote token (underlying asset) based on different pricing scenarios.
+
+These methods do not provide any configuration options for pricing levels. If custom pricing configurations are needed, a new oracle contract must be deployed with the desired settings.
+
 # Audit data
 
 ## Privileged actors
