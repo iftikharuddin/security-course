@@ -199,6 +199,26 @@ In the past, fees accrued to reserves upon liquidation, but they have been remov
 
 The liquidation bonus auction works well with LTV Ramping, allowing governors to adjust risk configurations without overly penalizing borrowers.
 
+### Bad Debt Socialization
+Bad debt socialisation is a feature that the governor of a vault can turn on. When it's on, if an account owes money but all its collateral has been taken during a liquidation, leaving behind a debt, that debt is canceled and spread out among all the current depositors in the vault. This way, everyone shares the loss. Some depositors might try to withdraw their money just before this happens to avoid losing any of it, but this could lead to a situation where everyone tries to withdraw at once, causing problems for the vault. If a vault's governor doesn't want this feature, they can turn it off with a command.
+
+To help off-chain users keep track of total borrowing and internal balances, when bad debt is socialised, logs are created. These logs make it look like someone is repaying the debt and someone else is withdrawing from the vault, even though they're not. This might make it seem like there's a negative balance for a certain address when looking at balances off-chain.
+
+### Alternative liquidations
+Alternative liquidations provide users with the option to customize their account protection beyond the standard vault liquidation system. Instead of relying solely on the vault's mechanism, users can opt for different methods facilitated by EVC operators.
+
+These alternative liquidations work like stop-loss orders in traditional finance. Users can set thresholds to trigger before their accounts fall into violation, allowing them to close their positions on their terms. Here are some customizable features users may opt for:
+
+1. **Reward Structure for Liquidators/Executors:** Users can choose different reward structures for those executing the liquidation, such as a fixed bonus, bonuses scaled with gas costs, or payment in alternative tokens.
+
+2. **Specific Trigger Conditions:** Users can set more specific conditions for triggering liquidations beyond simple net asset value thresholds.
+
+3. **Slippage Limits:** Users may specify explicit slippage limits or choose mandatory swapping venues to control the execution of liquidation trades.
+
+4. **Alternate Price Oracles:** Users can opt to use different price oracles than those specified by the vault, providing flexibility in determining asset prices for liquidation calculations.
+
+These alternative mechanisms empower users to tailor their account protection strategies to better suit their preferences and risk management needs.
+
 # Audit data
 
 ## Privileged actors
