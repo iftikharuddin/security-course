@@ -180,6 +180,12 @@ In this vault configuration, each vault can use a different pricing oracle for d
 
 This flexibility allows each vault to choose the most suitable oracle for its specific collateral types, ensuring accurate pricing. Importantly, this pricing oracle configuration is local to each liability vault, meaning collateral vaults are unaware of or unaffected by it. For example, a DAI vault allowing borrowing against USDC collateral might utilize a different oracle for its own pricing, similar to how lenders in traditional finance assess collateral independently. As a result, liquidity isn't constrained by oracle types, allowing for efficient use of available assets.
 
+### Unit of account
+The unit of account is like a common language used by vaults and the price oracle to understand the value of assets. When vaults specify a unit of account, it's like saying, "Let's all talk about our values in terms of this specific asset." This helps to keep things simple and avoids confusion.
+
+For example, if a vault's unit of account is USDC (a stablecoin), then all assets and debts will be measured in terms of USDC. If someone borrows DAI (another stablecoin) using USDC as collateral, both DAI and USDC will be priced in USDC terms. This makes it easier to understand how much each asset is worth.
+
+Using a common unit of account can also help to reduce risks. For instance, if you're borrowing USDC with DAI, it's better to price everything directly in USDC rather than using a different asset as a middleman. This can prevent unnecessary ups and downs in prices, making the system more stable and secure.
 # Audit data
 
 ## Privileged actors
