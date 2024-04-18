@@ -281,6 +281,45 @@ Although the Euler Vault Kit attempts to conform to the ERC-4626 standard as clo
 - The standard's max* functions may be inaccurate if hooks are installed. In this case, these functions will return the value that the vault code would normally return, without accounting for the fact that the hook may revert the transaction according to its own custom logic. However, if the hook target is address(0) (or any other non-contract), hooked operations will correctly return 0.
 - The standard says some view functions (totalAssets, convertToShares, maxDeposit, etc) "MUST NOT revert". However, the Vault Kit enforces read-only reentrancy protection for these (and other) functions in order to prevent external contracts from viewing inconsistent state during a vault operation. So, by design, when a vault operation is in progress, if the vault calls an external contract and it (or something it calls) tries to call these functions on the vault they will revert.
 
+
+### Static Modules
+
+1. **Organization and Optimization:**
+   - Static Modules are used to organize code efficiently and to stay within code size limits. They help in structuring the codebase for better organization and optimization.
+
+2. **Dispatcher Contract:**
+   - The main entry point contract, called EVault, acts as a dispatcher. It determines which module should be invoked based on the function call. EVault inherits from all modules, but the Solidity compiler removes overridden functions that are not used in the dispatching process.
+
+3. **Function Handling:**
+   - Functions can be handled in three ways:
+     - Implemented directly: No external module is invoked, making it the most efficient method.
+     - use(MODULE_XXX): Invokes the indicated module using delegatecall.
+     - useView(MODULE_XXX): Uses staticcall to call a view method from the module.
+
+4. **Implementation:**
+   - To implement a function directly, it's sufficient to not mention it in the dispatcher. However, for documentation purposes, the code provides a wrapper function that calls the module's function using super(), which is removed during compilation.
+
+5. **Delegation to Modules:**
+   - To delegate a function to a module, the function signature in the dispatcher is overwritten with either the use or useView modifier along with an empty code block as implementation. This causes the router to delegatecall into the module.
+
+6. **Static Nature:**
+   - Modules are static, meaning they cannot be upgraded. To upgrade the code, a new implementation with a reference to the new module must be deployed, and the implementation storage slot in the factory must be updated. Only upgradeable instances will be affected by this change.
+
+### Quantity Typing
+Quantity typing in Solidity means using specific types for different kinds of numbers in a smart contract to prevent errors and make it easier to understand. Here's what each type means:
+
+1. **Assets Type**: Represents amounts of the main asset in the contract. It has a maximum value to prevent issues and can be converted to shares.
+
+2. **Shares Type**: Represents the vault's own shares, each representing a portion of assets held and debts owed by the vault.
+
+3. **Owed Type**: Represents debts owed by users, stored similarly to assets but with extra precision for accurate interest calculations.
+
+4. **AmountCap Type**: Represents supply and borrowing limits, using a special format for easy handling.
+
+5. **ConfigAmount Type**: Represents a fraction between 0 and 1, scaled for precision.
+
+6. **LTVConfig Type**: Represents Loan-to-Value (LTV) ratios, used for calculating borrowing limits.
+
 # Audit data
 
 ## Privileged actors
