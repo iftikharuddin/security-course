@@ -163,6 +163,14 @@ The price oracle used by each vault must implement the `IPriceOracle` interface,
 
 These methods do not provide any configuration options for pricing levels. If custom pricing configurations are needed, a new oracle contract must be deployed with the desired settings.
 
+### Quotes
+Price oracles provide crucial information about token prices within a system. Instead of directly returning price fractions, they simulate swap transactions to avoid precision losses, particularly with tokens that have low decimals. The `getQuote` function tells you how many quote tokens you'd get for a specified amount of base tokens at the current market price. Advanced oracles might offer bid and ask prices, allowing users to gauge market spreads or express confidence intervals.
+
+Vaults utilize bid and ask prices to assess market depth and uncertainty. For instance, when evaluating new loans, they compute the Loan To Value (LTV) ratio using bid prices for collateral and ask prices for liabilities. However, during loan liquidations, the mid-point price is used to prevent liquidations based on temporary price fluctuations.
+
+By accepting both base and quote tokens, oracles can calculate cross prices, combining data from multiple sources similar to how swaps navigate through various DEX pools. At minimum, oracles should cross-price shares to assets, ensuring accurate valuation against underlying asset prices.
+
+
 # Audit data
 
 ## Privileged actors
