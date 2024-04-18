@@ -170,6 +170,15 @@ Vaults utilize bid and ask prices to assess market depth and uncertainty. For in
 
 By accepting both base and quote tokens, oracles can calculate cross prices, combining data from multiple sources similar to how swaps navigate through various DEX pools. At minimum, oracles should cross-price shares to assets, ensuring accurate valuation against underlying asset prices.
 
+### Vault configuration
+
+In this vault configuration, each vault can use a different pricing oracle for determining asset values, even if they share the same underlying asset. For instance, a vault that accepts USDC as collateral might use various oracles for different collateral types. For example:
+- It might use a 1:1 peg for DAI/USDC.
+- Chainlink for USDT/USDC.
+- Uniswap3 TWAP for WETH/USDC.
+- Forward its pricing for UNI to another oracle implementation.
+
+This flexibility allows each vault to choose the most suitable oracle for its specific collateral types, ensuring accurate pricing. Importantly, this pricing oracle configuration is local to each liability vault, meaning collateral vaults are unaware of or unaffected by it. For example, a DAI vault allowing borrowing against USDC collateral might utilize a different oracle for its own pricing, similar to how lenders in traditional finance assess collateral independently. As a result, liquidity isn't constrained by oracle types, allowing for efficient use of available assets.
 
 # Audit data
 
