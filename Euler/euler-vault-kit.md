@@ -186,6 +186,19 @@ The unit of account is like a common language used by vaults and the price oracl
 For example, if a vault's unit of account is USDC (a stablecoin), then all assets and debts will be measured in terms of USDC. If someone borrows DAI (another stablecoin) using USDC as collateral, both DAI and USDC will be priced in USDC terms. This makes it easier to understand how much each asset is worth.
 
 Using a common unit of account can also help to reduce risks. For instance, if you're borrowing USDC with DAI, it's better to price everything directly in USDC rather than using a different asset as a middleman. This can prevent unnecessary ups and downs in prices, making the system more stable and secure.
+
+### Liquidations
+
+Liquidation is when an account's collateral value becomes too low compared to its debt. Liquidators, like profit-seeking bots, watch for these situations off-chain and step in to liquidate the account.
+
+During liquidation, the liquidator receives collateral shares from a vault and takes on debt from another vault. To encourage liquidators, the collateral shares received are more valuable than the debt taken. This difference in value is called the liquidation bonus.
+
+The liquidation process is based on a reverse dutch auction system. The bonus increases as the account becomes more deeply in violation. This ensures that liquidations happen profitably, especially as prices move against the account.
+
+In the past, fees accrued to reserves upon liquidation, but they have been removed in Euler V1 to prevent disruptions and malincentives. Now, the loss to depositors starts at 0%, making liquidations less disruptive for users with leveraged positions. This simplifies the code, and liquidations apply to the entire position of a violating account.
+
+The liquidation bonus auction works well with LTV Ramping, allowing governors to adjust risk configurations without overly penalizing borrowers.
+
 # Audit data
 
 ## Privileged actors
