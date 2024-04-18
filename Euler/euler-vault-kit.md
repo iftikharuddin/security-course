@@ -219,6 +219,35 @@ These alternative liquidations work like stop-loss orders in traditional finance
 
 These alternative mechanisms empower users to tailor their account protection strategies to better suit their preferences and risk management needs.
 
+### Interesting point
+
+Without earning interest on collateral, a strategy called "carry trade" wouldn't work. Carry trade is when you borrow money at a low interest rate and invest it where you can earn a higher interest rate. It's like borrowing cheaply and investing for a bigger return.
+
+### Synthetic Assets
+
+Sure, let's break it down:
+
+**Synthetic Asset Vaults:**
+These are special vaults that use hooks to control who can deposit, mint, and loop (a process that allows certain actions to be repeated). Instead of a traditional interest rate model based on utilization, they use a reactive interest rate model that adjusts based on the trading price of a synthetic asset called IRMSynth. This mechanism aims to keep the synthetic asset's value as close as possible to the value of another asset (the peg asset).
+
+**ESynth:**
+ESynth is an ERC-20 compatible token with Euler Vault Controller (EVC) support. It can be used as collateral in other vaults. It allows minting (creating) and burning (destroying) of tokens based on certain conditions.
+
+**Minting and Burning:**
+Minting allows the creation of synthetic assets, while burning removes them from circulation. These actions are regulated based on permissions set by the contract owner.
+
+**Allocating and Deallocating:**
+The owner of the contract can allocate synthetic assets to a vault, effectively depositing them into the vault. Conversely, they can deallocate assets from a vault, withdrawing them. These actions impact the total supply of synthetic assets.
+
+**IRMSynth:**
+This is the interest rate model used for synthetic assets. It adjusts the interest rate based on the trading price of the synthetic asset compared to a target price. This mechanism aims to stabilize the value of the synthetic asset.
+
+**EulerSavingsRate:**
+This is a vault that allows users to deposit assets and earn interest in the same asset. The interest is distributed to depositors over time. It also checks the account status of users before allowing them to withdraw, ensuring that the vault can be used as collateral.
+
+**PegStabilityModule:**
+This module is granted minting rights for a synthetic asset and facilitates fee-free conversion between the synthetic asset and the underlying asset it's pegged to. Fees collected during swaps serve as a reserve to maintain the peg. There are limits on how much can be swapped based on the assets held by the module.
+
 # Audit data
 
 ## Privileged actors
