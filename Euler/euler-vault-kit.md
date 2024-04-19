@@ -367,3 +367,21 @@ the contract is deployed on other chains.
 ## Tips
 - Whenever an operation affects an account’s solvency in a controller vault, the Ethereum
  Vault Connector triggers the `checkAccountStatus` function in the respective controller vault(s)
+ 
+ `ExecutionContext` library, which manages the state of certain flags used within the Ethereum Vault Connector contract. Here's a breakdown:
+ 
+ 1. **Title and Author**: The title specifies the name of the library, while the author indicates the organization responsible for its creation.
+ 
+ 2. **Notice**: Provides a general notice that this library contains functions for managing the execution context within the Ethereum Vault Connector.
+ 
+ 3. **Details about the Execution Context**:
+    - **Bit Field**: The execution context is described as a "bit field," which means it stores multiple boolean flags within a single integer variable. Each flag corresponds to a specific bit within this integer, allowing multiple pieces of information to be stored compactly.
+    - **Flags Described**:
+      - **On Behalf of Account**: Stores the address of the account on behalf of which the currently executed operation is being performed.
+      - **Checks Deferred**: Indicates whether checks, such as account or vault status checks, are deferred.
+      - **Checks in Progress**: Flags whether account/vault status checks are currently in progress, preventing re-entrancy.
+      - **Control Collateral in Progress**: Indicates if the control collateral process is ongoing, also preventing re-entrancy.
+      - **Operator Authenticated**: Signals that the current operation is being performed by the account operator.
+      - **Simulation**: Marks if the current batch call is a simulation, likely used for testing or previewing without committing changes.
+    - **Stamp**: Described as a "dummy value for optimization purposes," suggesting it's used to ensure certain storage slots remain non-zero, potentially optimizing gas costs.
+ 
