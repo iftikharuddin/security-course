@@ -1,5 +1,7 @@
 ## Euler Vault Kit
 
+**EVK Docs:** https://docs.euler.finance/euler-vault-kit-white-paper/
+
 **Governance Risk:**
 - **Properties:** Upgradeable/Immutable and Governed/Finalised are independent properties of a vault and can be combined in any way.
 - **Vault Kit Agnosticism:** The Euler Vault Kit allows creators to decide the governance risk, and the market determines which vaults receive liquidity rewards.
