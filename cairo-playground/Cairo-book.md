@@ -363,6 +363,85 @@ ______
          (arr, length)
      }
      ```
+____
+### Important Points from References and Snapshots
+
+1. **Snapshots:**
+   - Snapshots provide an immutable view of a value at a specific point in time.
+   - They allow retaining ownership in the calling function while still passing the value to other functions.
+   - Example:
+     ```cairo
+     let first_snapshot = @arr1;
+     ```
+
+2. **Function Parameters with Snapshots:**
+   - Use the `@` symbol to indicate that a function parameter is a snapshot.
+   - Example:
+     ```cairo
+     fn calculate_length(arr: @Array<u128>) -> usize {
+         arr.len()
+     }
+     ```
+
+3. **Desnap Operator (`*`):**
+   - Converts a snapshot back into a regular variable.
+   - Only Copy types can be desnapped.
+   - Example:
+     ```cairo
+     *rec.height * *rec.width
+     ```
+
+4. **Immutability of Snapshots:**
+   - Snapshots cannot be modified.
+   - Attempting to modify a snapshot results in a compilation error.
+   - Example of invalid code:
+     ```cairo
+     rec.height = rec.width;
+     rec.width = temp;
+     ```
+
+5. **Mutable References:**
+   - Allow passing a mutable value to a function, implicitly returning ownership after the function call.
+   - Use the `ref` modifier for parameters and `mut` for variable declaration.
+   - Example:
+     ```cairo
+     let mut rec = Rectangle { height: 3, width: 10 };
+     flip(ref rec);
+     ```
+
+6. **Example with Mutable References:**
+   - Swapping the height and width fields of a `Rectangle` instance.
+   - Example:
+     ```cairo
+     #[derive(Drop)]
+     struct Rectangle {
+         height: u64,
+         width: u64,
+     }
+
+     fn main() {
+         let mut rec = Rectangle { height: 3, width: 10 };
+         flip(ref rec);
+         println!("height: {}, width: {}", rec.height, rec.width);
+     }
+
+     fn flip(ref rec: Rectangle) {
+         let temp = rec.height;
+         rec.height = rec.width;
+         rec.width = temp;
+     }
+     ```
+
+These points summarize the core concepts and usage of snapshots and mutable references in Cairo, highlighting how they help manage ownership and mutability in the linear type system.
+____
+
+Let’s recap what we’ve discussed about the linear type system, ownership, snapshots, and references:
+
+At any given time, a variable can only have one owner.
+You can pass a variable by-value, by-snapshot, or by-reference to a function.
+If you pass-by-value, ownership of the variable is transferred to the function.
+If you want to keep ownership of the variable and know that your function won’t mutate it, you can pass it as a snapshot with @.
+If you want to keep ownership of the variable and know that your function will mutate it, you can pass it as a mutable reference with ref.
 
 ______
 - https://book.cairo-lang.org/
