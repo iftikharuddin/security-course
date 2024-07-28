@@ -122,6 +122,71 @@ ______
     ```
 ______
 
+### Dictionaries in Cairo
+
+1. **Definition and Purpose:**
+   - `Felt252Dict<T>` is a collection of unique key-value pairs.
+   - Keys are `felt252` and values are of type `T`.
+   - Useful for organizing data where arrays are not sufficient.
+
+2. **Basic Operations:**
+   - **Insert:** Adds or updates a key-value pair.
+     ```cairo
+     balances.insert('Alex', 100);
+     ```
+   - **Get:** Retrieves the value associated with a key.
+     ```cairo
+     let alex_balance = balances.get('Alex');
+     ```
+
+3. **Creating a Dictionary:**
+   - Use the `Default::default()` method to create a new dictionary.
+     ```cairo
+     let mut balances: Felt252Dict<u64> = Default::default();
+     ```
+
+4. **Immutability and Modification:**
+   - Memory is immutable; you can't change an existing value, but you can "rewrite" it by inserting a new value for the same key.
+
+5. **Automatic Zero Initialization:**
+   - All keys in a dictionary are initialized to zero.
+   - Accessing a non-existent key returns 0.
+
+6. **No Deletion:**
+   - You cannot delete a key-value pair from a dictionary.
+
+7. **Handling Values:**
+   - Using `insert()` to add or update values.
+   - Using `get()` to read values, which returns 0 for non-existent keys.
+
+8. **Example Usage:**
+   - Insert and retrieve balances for individuals.
+   - Update an individual's balance by reinserting the key with a new value.
+     ```cairo
+     // Insert balance
+     balances.insert('Alex', 100);
+     let alex_balance = balances.get('Alex');
+     // Update balance
+     balances.insert('Alex', 200);
+     let alex_balance_2 = balances.get('Alex');
+     ```
+
+9. **Default Initialization:**
+   - Dictionary keys are initialized to zero, avoiding undefined values or errors when accessing non-existent keys.
+
+10. **Non-deterministic Nature:**
+    - Cairo is a non-deterministic Turing-complete language, influencing how dictionaries are implemented differently from other languages.
+
+[Footnote]: A Turing-complete language is a programming language that can simulate any computation or algorithm given enough time and resources.
+            
+            
+            
+            
+            
+            
+______
+
+
 - https://book.cairo-lang.org/
 - Spearbit Cairo Security (Peteris Erins) https://youtu.be/9CIhHNrliW4
 - Cairo audits: https://github.com/Cairo-Security-Clan/Audit-Portfolio
