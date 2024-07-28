@@ -179,7 +179,82 @@ ______
 
 [Footnote]: A Turing-complete language is a programming language that can simulate any computation or algorithm given enough time and resources.
             
-            
+    
+____        
+
+## More about dictionaries
+
+### Very Important Points from the Documentation
+
+1. **Felt252Dict<T> Overview:**
+   - Represents a collection of unique key-value pairs.
+   - Useful for organizing data where arrays are insufficient.
+   - Key type is restricted to `felt252`, and value type is specified by `T`.
+
+2. **Basic Operations:**
+   - **Insert:** Adds or updates a key-value pair.
+     ```cairo
+     balances.insert('Alex', 100);
+     ```
+   - **Get:** Retrieves the value associated with a key.
+     ```cairo
+     let alex_balance = balances.get('Alex');
+     ```
+
+3. **Memory Immutability:**
+   - Cairo's memory is immutable; dictionaries simulate mutability using a list of entries.
+   - Each entry records the key, previous value, and new value.
+
+4. **Automatic Zero Initialization:**
+   - All keys are initialized to zero by default.
+   - Accessing a non-existent key returns 0 instead of an error.
+
+5. **No Deletion:**
+   - There is no way to delete data from a dictionary; it can only be updated.
+
+6. **Entry and Finalize Methods:**
+   - **Entry:** Creates a new entry for a given key and returns the entry and previous value.
+     ```cairo
+     fn entry(self: Felt252Dict<T>, key: felt252) -> (Felt252DictEntry<T>, T) nopanic
+     ```
+   - **Finalize:** Updates the entry with a new value and returns the updated dictionary.
+     ```cairo
+     fn finalize(self: Felt252DictEntry<T>, new_value: T) -> Felt252Dict<T>
+     ```
+
+7. **Dictionary Squashing:**
+   - Ensures dictionary integrity by verifying that the last entry's `new_value` matches the next entry's `previous_value` for the same key.
+   - Reduces the entry list to the most recent entry for each key.
+
+8. **Destruct<T> Trait:**
+   - Automatically calls `squash_dict` before the dictionary goes out of scope.
+   - Differentiates from `Drop<T>` as it can generate new Cairo Assembly (CASM) code.
+
+9. **Using Complex Types:**
+   - `Nullable<T>` and `Box<T>` are used to store complex types in dictionaries.
+   - Example for storing and retrieving a span of `felt252`:
+     ```cairo
+     d.insert(0, NullableTrait::new(a.span()));
+     ```
+
+10. **Example Implementations:**
+    - Custom `get` method:
+      ```cairo
+      fn custom_get<T, +Felt252DictValue<T>, +Drop<T>, +Copy<T>>(ref dict: Felt252Dict<T>, key: felt252) -> T {
+          let (entry, prev_value) = dict.entry(key);
+          let return_value = prev_value;
+          dict = entry.finalize(prev_value);
+          return_value
+      }
+      ```
+    - Custom `insert` method:
+      ```cairo
+      fn custom_insert<T, +Felt252DictValue<T>, +Destruct<T>, +Drop<T>>(ref dict: Felt252Dict<T>, key: felt252, value: T) {
+          let (entry, _prev_value) = dict.entry(key);
+          dict = entry.finalize(value);
+      }
+      ```
+
             
             
             
