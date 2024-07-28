@@ -1,5 +1,6 @@
 ## Let's explore Cairo lang
 
+_____
 **Data Types Overview**
 - Cairo is statically typed, requiring all variable types to be known at compile time.
 - Conversion methods can specify desired output types when multiple types are possible.
@@ -41,6 +42,86 @@
 
 Understanding these data types and their characteristics is fundamental for effectively programming in Cairo, ensuring type safety, security, and efficient data handling.
 ______
+
+1. **Function Definitions and Conventions:** Functions use the `fn` keyword and snake case for names.
+   ```cairo
+   fn another_function() {
+       println!("Another function.");
+   }
+   ```
+
+2. **Creating and Running Functions:** Define with `fn`, name, parentheses, and body in curly brackets.
+   ```cairo
+   fn main() {
+       println!("Hello, world!");
+       another_function();
+   }
+   ```
+
+3. **Function Parameters:** Parameters must have declared types.
+   ```cairo
+   fn another_function(x: felt252) {
+       println!("The value of x is: {}", x);
+   }
+   ```
+
+4. **Function Calls with Parameters:** Call functions by passing matching arguments.
+   ```cairo
+   fn main() {
+       another_function(5);
+   }
+   ```
+
+5. **Multiple Parameters:** Use commas to separate multiple parameters.
+   ```cairo
+   fn print_labeled_measurement(value: u128, unit_label: ByteArray) {
+       println!("The measurement is: {value}{unit_label}");
+   }
+   ```
+
+6. **Named Parameters:** Use named parameters for readability.
+   ```cairo
+   fn foo(x: u8, y: u8) {}
+
+   fn main() {
+       let first_arg = 3;
+       let second_arg = 4;
+       foo(x: first_arg, y: second_arg);
+   }
+   ```
+
+7. **Statements and Expressions:** Statements perform actions, expressions evaluate to values.
+   ```cairo
+   let y = 6;
+   ```
+
+8. **Function Return Values:** Declare return values with `->` followed by the type.
+   ```cairo
+   fn five() -> u32 {
+       5
+   }
+
+   fn main() {
+       let x = five();
+       println!("The value of x is: {}", x);
+   }
+   ```
+
+9. **Returning Values from Functions:** Avoid semicolons at the end of return expressions.
+   ```cairo
+   fn plus_one(x: u32) -> u32 {
+       x + 1
+   }
+   ```
+
+10. **Error Handling in Function Returns:** Statements do not return values, causing errors if expected.
+    ```cairo
+    fn plus_one(x: u32) -> u32 {
+        x + 1; // Error due to semicolon
+    }
+    ```
+______
+
 - https://book.cairo-lang.org/
 - Spearbit Cairo Security (Peteris Erins) https://youtu.be/9CIhHNrliW4
 - Cairo audits: https://github.com/Cairo-Security-Clan/Audit-Portfolio
