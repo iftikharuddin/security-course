@@ -255,13 +255,116 @@ ____
       }
       ```
 
-            
-            
-            
-            
 ______
+## Ownership in Cairo
 
+1. **Linear Type System:**
+   - Values must be used once, either destroyed or moved.
+   - Destruction can happen when:
+     - A variable goes out of scope.
+     - A struct is destructured.
+     - Explicit destruction using `destruct()`.
 
+2. **Ownership in Cairo:**
+   - Ownership applies to variables, not values.
+   - Variables have a single owner at a time.
+   - When the owner goes out of scope, the variable is destroyed.
+
+3. **Variable Scope:**
+   - Variables are valid from their declaration until the end of their scope.
+   - Example:
+     ```cairo
+     { 
+         let s = 'hello'; // s is valid
+     } // s is no longer valid
+     ```
+
+4. **Moving Values:**
+   - Passing a value to another function moves it, making the original variable unusable.
+   - Example:
+     ```cairo
+     fn foo(mut arr: Array<u128>) {
+         arr.pop_front();
+     }
+
+     fn main() {
+         let mut arr: Array<u128> = array![];
+         foo(arr);
+         foo(arr); // Error: arr is already moved
+     }
+     ```
+
+5. **The Copy Trait:**
+   - Types that implement the `Copy` trait can be copied instead of moved.
+   - All basic types implement the `Copy` trait by default.
+   - Example:
+     ```cairo
+     #[derive(Copy, Drop)]
+     struct Point {
+         x: u128,
+         y: u128,
+     }
+
+     fn main() {
+         let p1 = Point { x: 5, y: 10 };
+         foo(p1);
+         foo(p1); // No error: Point implements Copy
+     }
+     ```
+
+6. **Destruction with Drop and Destruct Traits:**
+   - **Drop Trait:** No-op destruction, simply a hint for the compiler.
+   - **Destruct Trait:** Ensures dictionaries are squashed when going out of scope.
+   - Example with `Destruct`:
+     ```cairo
+     #[derive(Destruct)]
+     struct A {
+         dict: Felt252Dict<u128>
+     }
+
+     fn main() {
+         A { dict: Default::default() }; // No error: dict is squashed
+     }
+     ```
+
+7. **Clone Method:**
+   - Deep copies data, creating new memory cells.
+   - Example:
+     ```cairo
+     fn main() {
+         let arr1: Array<u128> = array![];
+         let arr2 = arr1.clone();
+     }
+     ```
+
+8. **Returning Values:**
+   - Returning a value moves it to the caller.
+   - Example:
+     ```cairo
+     #[derive(Drop)]
+     struct A {}
+
+     fn gives_ownership() -> A {
+         let some_a = A {};
+         some_a // Moves ownership to the caller
+     }
+
+     fn takes_and_gives_back(some_a: A) -> A {
+         some_a // Moves ownership to the caller
+     }
+     ```
+
+9. **Returning Multiple Values:**
+   - Use tuples to return multiple values.
+   - Example:
+     ```cairo
+     fn calculate_length(arr: Array<u128>) -> (Array<u128>, usize) {
+         let length = arr.len();
+         (arr, length)
+     }
+     ```
+
+______
 - https://book.cairo-lang.org/
 - Spearbit Cairo Security (Peteris Erins) https://youtu.be/9CIhHNrliW4
 - Cairo audits: https://github.com/Cairo-Security-Clan/Audit-Portfolio
