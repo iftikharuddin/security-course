@@ -438,6 +438,28 @@ ____
 * **No Null Pointers in Cairo:** Cairo does not have null pointers or a null keyword; use the `Option` type to represent the possibility of an object being null.
 * A package is the top-level organizational unit, containing crates. A crate contains modules.
 
+_____
+
+### Custom Data Structures in Cairo
+1. **Immutability of Arrays**: Arrays (`Array<T>`) in Cairo are immutable, making it difficult to modify data once appended.
+2. **Felt252Dict for Mutability**: Use `Felt252Dict<T>` to create mutable data structures.
+3. **Structs with Dictionaries**: Structs can include dictionaries as members to manage mutable data.
+4. **Traits for Struct Functionality**: Define and implement traits to add functionality to structs.
+5. **Destruct Trait Implementation**: Manually implement the `Destruct<T>` trait for structs with generic types to manage memory correctly.
+
+### Smart Pointers in Cairo
+1. **Smart Pointers**: Enhance safety and performance by managing memory access and ownership rules.
+2. **Box<T> Type**: Used for managing large data and enabling recursive types.
+3. **Nullable<T> Type**: Provides safe handling of optional values in dictionaries.
+4. **Passing Pointers**: Improves performance by avoiding copying large amounts of data when passing between functions.
+
+### Hashing in Cairo
+1. **Hashing Process**: Converts input data into a fixed-size value (hash), which is deterministic.
+2. **Pedersen Hash**: Uses elliptic curve cryptography, secure due to the difficulty of reversing the operations.
+3. **Poseidon Hash**: Efficient for Zero-Knowledge proof systems, recommended for use in Cairo programs.
+4. **Hash Trait**: Allows types convertible to `felt252` to be hashed.
+5. **HashStateTrait and HashStateExTrait**: Define methods to work with hash states.
+6. **Advanced Hashing**: Techniques for hashing arrays and more complex structures using Poseidon.
 
 _____
 Let’s recap what we’ve discussed about the linear type system, ownership, snapshots, and references:
