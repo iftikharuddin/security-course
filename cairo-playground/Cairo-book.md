@@ -435,7 +435,10 @@ ____
 These points summarize the core concepts and usage of snapshots and mutable references in Cairo, highlighting how they help manage ownership and mutability in the linear type system.
 ____
 
-**No Null Pointers in Cairo:** Cairo does not have null pointers or a null keyword; use the `Option` type to represent the possibility of an object being null.
+* **No Null Pointers in Cairo:** Cairo does not have null pointers or a null keyword; use the `Option` type to represent the possibility of an object being null.
+* A package is the top-level organizational unit, containing crates. A crate contains modules.
+
+
 _____
 Let’s recap what we’ve discussed about the linear type system, ownership, snapshots, and references:
 
