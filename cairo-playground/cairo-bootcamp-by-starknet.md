@@ -11,4 +11,4 @@
 #### Field Elements (felt)
 - Cairo's default datatype is felt252 (not u256)
 - Signed integers not yet supported on SN
-- https://starklings.app/ (live code Cairo without IDE)
+- https://starklings.app/ (interactive learning of cairo)
