@@ -12,3 +12,13 @@
 - Cairo's default datatype is felt252 (not u256)
 - Signed integers not yet supported on SN
 - https://starklings.app/ (interactive learning of cairo)
+
+### Smart contracts in Cario
+- A smart contract is a cairo module
+- A smart contract must have a storage defined, even if it is empty.
+
+### Components
+- Components are modular add-ons containing functions, storage and events. 
+- Can be implemented in multiple contracts.
+- Cannot be deployed or declared
+- Becomes part of the contract’s bytecode
