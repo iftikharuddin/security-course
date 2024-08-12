@@ -11,10 +11,12 @@
     <mapping directory="$PROJECT_DIR$/Euler/euler-encode-workshop/lib/forge-std" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/basic-solc-project/lib/forge-std" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/basic-solc-project/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cairo-playground/counter-workshop" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sc-exploits-minimized" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sc-exploits-minimized/lib/forge-std" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sc-exploits-minimized/lib/forge-std/lib/ds-test" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sc-exploits-minimized/lib/kontrol-cheatcodes" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sc-exploits-minimized/lib/openzeppelin-contracts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/solana/SolanaBootcamp" vcs="Git" />
   </component>
 </project>
