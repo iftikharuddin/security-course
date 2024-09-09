@@ -13,6 +13,10 @@
   - Strongly typed, traits, macros
   - Can be used outside of Starknet
   - No need to know ZK! It abstracts away everything for us.
+- Cairo can be weaker than Rust performance wise
+    - Reason is that it compiles to VM and also the feature of cryptographic proves which adds another layer
+- Cairo is strongly typed language, so you have to define datatypes in code
+- Metaprogramming is the process of writing programs that can generate, modify, or manipulate other programs or themselves at runtime or compile-time.
 - 
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
