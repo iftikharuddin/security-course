@@ -75,7 +75,10 @@ This below table summarizes the different types of zk-EVMs based on their trade-
     - Compilation can't be proven
     - So the long term solution will be to write Cairo compiler in cairo, so that compilation can be proven
 - Before executing a program you have to declare it and then you have to deploy it
-
+- Declaration = Register the smart contract's code (no storage, only code). It's like a class (contract class) in OOP
+- Deployment = Create instances from the contract class (each instance has storage and its own unique address).
+- In essence, declaring is like registering a blueprint, and deploying is like building actual structures based on that blueprint.
+  
 ### Basecamp 9 Session 2: Deep Dive
 -
 ___
