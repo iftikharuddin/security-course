@@ -71,6 +71,12 @@ This below table summarizes the different types of zk-EVMs based on their trade-
 6. **Sequencer Compensation**: The sequencer is always compensated for its work.
 7. **Improvement Over Cairo0**: The new system removes potential DoS vectors present in earlier versions (Cairo0).
 
+- The cairo compiler is written in rust!
+    - Compilation can't be proven
+    - So the long term solution will be to write Cairo compiler in cairo, so that compilation can be proven
+- Before executing a program you have to declare it and then you have to deploy it
 
+### Basecamp 9 Session 2: Deep Dive
+-
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
