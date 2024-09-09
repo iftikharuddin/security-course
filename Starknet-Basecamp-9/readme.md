@@ -43,7 +43,34 @@ ____
   
 
 - In simple terms, STARKs are newer and more secure against future threats, but their proofs are bigger. SNARKs are more compact and faster to verify, but they need a special setup and aren't as future-proof. Each has its own strengths depending on what's most important for a particular use case.  
--     
+
+This below table summarizes the different types of zk-EVMs based on their trade-offs between changes to the EVM, compatibility with Ethereum, and performance.
+
+| **Type** | **EVM Changes**                      | **Compatibility**          | **Performance** | **Projects**                                   |
+|----------|--------------------------------------|----------------------------|-----------------|------------------------------------------------|
+| **Type 1** | None                                 | Full                       | Very Slow       | None listed                                    |
+| **Type 2** | Storage data structure               | High                       | Slow            | None listed                                    |
+| **Type 3** | Storage, hashes, precompiles         | Partial                    | Fast            | Kakrot, zkSync, Scroll, Polygon zkEVM           |
+| **Type 4** | Completely different virtual machine | None                       | Very Fast       | Starknet, Aztec, Polygon Miden                 |
+
+- L1 Finality of Starknet is ~2 hours, however L2 finalizty is ~3 seconds
+
+### Smart wallets 
+
+- uses account abstraction
+- there are no EOAs
+- on Starknet every wallet is a smart wallet
+
+### Architecture 101 
+
+1. **Write Cairo Smart Contract**: Use Cairo, a provable programming language with syntax similar to Rust.
+2. **Compile to Sierra**: The Cairo code compiles into **Sierra** (Safe Intermediate Representation).
+3. **Compile to Safe CASM**: The sequencer compiles Sierra to **Safe CASM** (Cairo Assembly).
+4. **Generate Validity Proof**: From Safe CASM, a validity proof is generated to ensure the correctness of transactions.
+5. **Failed Transactions**: Even failed transactions are included in blocks.
+6. **Sequencer Compensation**: The sequencer is always compensated for its work.
+7. **Improvement Over Cairo0**: The new system removes potential DoS vectors present in earlier versions (Cairo0).
+
 
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
