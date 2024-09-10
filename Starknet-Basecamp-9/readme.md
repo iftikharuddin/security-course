@@ -80,6 +80,43 @@ This below table summarizes the different types of zk-EVMs based on their trade-
 - In essence, declaring is like registering a blueprint, and deploying is like building actual structures based on that blueprint.
   
 ### Basecamp 9 Session 2: Deep Dive
--
+
+#### Starknet transaction lifecycle
+
+Summary of the Starknet transaction lifecycle and important points about REVERTED and REJECTED states:
+
+Transaction Lifecycle Summary:
+1. Transaction submission to gateway (mempool) sequencer
+2. Mempool validation
+3. Sequencer validation
+4. Execution by sequencer
+5. Proof generation and verification
+6. L1 state update
+
+Important Pointers:
+
+REJECTED State:
+- Occurs during mempool or sequencer validation
+- Transaction fails preliminary checks (e.g., signature validation)
+- Not included in a block
+- No execution status
+- Stored in mempool, preventing reuse of transaction hash
+
+REVERTED State:
+- Occurs during execution phase
+- Passed validation but failed during sequencer execution
+- Included in the block with REVERTED status
+- Only applies to INVOKE transactions (DEPLOY_ACCOUNT and DECLARE can't be reverted)
+- Nonce still increases
+- Fee charged for execution up to failure point
+- Partial reversion: validation stage changes kept, execution stage changes reverted
+- Fee calculation: min(max_fee, total consumed resources)
+- Events from validation and fee charge stages may still be emitted
+
+General Notes:
+- Transaction status progresses from NOT_RECEIVED to ACCEPTED_ON_L1
+- ACCEPTED_ON_L2 indicates finality on L2
+- Transaction receipt provides detailed information about execution and resources used
+
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
