@@ -132,6 +132,24 @@ General Notes:
 - state diff -> diff between current state and new blocks
 - The StarknetOS is a cairo zero program
     - Sequencer -> meme pool tx -> CairoVM blocks -> StarknetOS -> trace -> prover output -> b.writer ( EOA )
-    
+   
+
+### **Data Availability Modes**
+
+#### **Rollup**:
+- Layer 2 solutions (L2s) that use Ethereum for Data Availability (DA).
+- Provides better liveness but is more expensive.
+- **Starknet** is a Rollup.
+
+#### **Validium**:
+- Layer 2 solutions (L2s) that **don't** use Ethereum for Data Availability.
+- Provides worse liveness but is cheaper.
+- **StarkEx** is a Validium.
+
+#### **Volition**:
+- Hybrid Data Availability mode (combines both Rollup and Validium).
+- Users can choose where to store data.
+- Coming soon to **Starknet**.    
+
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
