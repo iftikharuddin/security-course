@@ -151,5 +151,46 @@ General Notes:
 - Users can choose where to store data.
 - Coming soon to **Starknet**.    
 
+## Basecamp 9 Session 3: Cairo
+
+  
+**Cairo: A Confusing Name**
+
+- Cairo originally referred to a computer architecture
+
+- **CPU AIR** (Algebraic Intermediate Representation)
+
+- The **low level** bytecode executed by a CPU AIR is known as "Cairo Assembly" or **CASM**
+
+- The **high level** language that compiles to Sierra and then to CASM is also known as "Cairo"
+
+- The old implementation of the high level language is known as **CairoZero** (now deprecated)
+  
+
+---
+
+**Cairo’s (the language) History**
+
+- **2018**: Publishing of **STARK white paper**
+  
+- **2019**: Creation of StarkEx
+  - Hardcoded polynomial constraints
+
+- **2020**: Creation of Cairo (now CairoZero)
+  - StarkEx rewritten using Cairo
+
+- **2021**: Publishing of **Cairo white paper**
+
+- **2021**: Creation of StarkNet
+  - Cairo smart contracts
+
+- **2023**: Release of Cairo 1.0 (now just Cairo)
+
+---
+
+- Signed integers not yet supported on Starknet! but can work in Cairo! Alexendria lib can handle negative numbers
+- The contract max data size is 4 MB!!
+
+
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
