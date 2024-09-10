@@ -118,5 +118,19 @@ General Notes:
 - ACCEPTED_ON_L2 indicates finality on L2
 - Transaction receipt provides detailed information about execution and resources used
 
+### Transaction types
+- Declare -> registers new code on SN
+- Invoke -> Executes write functions (can be used to call Universal deployer also)
+- deploy_account -> Deploys an account contract ( i.e smart wallet )
+
+
+### Data Availability
+
+- DA prevents SN from getting stuck ( liveness )
+- SN sends state diffs, class hashes and compiled class hashes as DA ( these are outputs of SN OS program )
+- DA data is posted to ETH as blobs
+- state diff -> diff between current state and new blocks
+- The StarknetOS is a cairo zero program
+    - Sequencer -> memepool tx -> CairoVM blocks -> StarknetOS -> trace -> prover output -> b.writer
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
