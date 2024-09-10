@@ -131,6 +131,7 @@ General Notes:
 - DA data is posted to ETH as blobs
 - state diff -> diff between current state and new blocks
 - The StarknetOS is a cairo zero program
-    - Sequencer -> memepool tx -> CairoVM blocks -> StarknetOS -> trace -> prover output -> b.writer
+    - Sequencer -> meme pool tx -> CairoVM blocks -> StarknetOS -> trace -> prover output -> b.writer ( EOA )
+    
 ___
 Ref: https://youtu.be/bZd-WUvNH5Q?list=PLMXIoXErTTYWyWg4AQVJP1N-7ZoYh4g1y
