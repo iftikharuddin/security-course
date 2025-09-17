@@ -1,0 +1,279 @@
+2025-09-16T19:53:41.240035Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T19:54:12.105188Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T19:55:25.741942Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T19:56:18.621789Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T19:56:43.294441Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:03:17.170898Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:03:38.391430Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:05:26.249973Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:05:54.982433Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:06:05.996814Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:06:06.259608Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:06:06.262910Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:06:06.262923Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:06:06.264020Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:06:06.264030Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -enhancedErrorMessages:1 -proverOpt:O:model_validate=true -vcsCores:4 -inferModifies -printModel:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 output/spec_no_abort_check.bpl -printVerifiedProceduresCount:0 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3
+2025-09-16T20:06:06.264061Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:06:07.108719Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:06:07.112486Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:06:07.123721Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:06:07.129457Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:06:07.129473Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::sum_spec.bpl`
+2025-09-16T20:06:07.130444Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:06:07.130453Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -printModel:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -enhancedErrorMessages:1 -inferModifies -proverOpt:O:model_validate=true -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -vcsCores:4 -printVerifiedProceduresCount:0 output/protocol_formal_verification::sum_spec.bpl
+2025-09-16T20:06:07.130461Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:06:08.454942Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:06:08.456680Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::sum_spec.bpl.log
+2025-09-16T20:06:08.460899Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.256s translation, 2.225s verification
+2025-09-16T20:07:19.004629Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:07:27.087775Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:07:27.362637Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:07:27.366265Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:07:27.366280Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:07:27.368361Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:07:27.368370Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -printModel:1 -inferModifies -vcsCores:4 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:model_validate=true -enhancedErrorMessages:1 -printVerifiedProceduresCount:0 output/spec_no_abort_check.bpl
+2025-09-16T20:07:27.368382Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:07:28.192683Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:07:28.197791Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:07:28.209382Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:07:28.212746Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:07:28.212764Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::sum_spec.bpl`
+2025-09-16T20:07:28.213135Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:07:28.213142Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -proverOpt:O:model_validate=true -inferModifies -enhancedErrorMessages:1 -printVerifiedProceduresCount:0 output/protocol_formal_verification::sum_spec.bpl -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -vcsCores:4 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -printModel:1 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3
+2025-09-16T20:07:28.213150Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:07:29.334265Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:07:29.336758Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::sum_spec.bpl.log
+2025-09-16T20:07:29.343267Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.251s translation, 2.007s verification
+2025-09-16T20:09:06.105607Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:10:00.592617Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:10:26.574285Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:10:36.052543Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:10:39.859349Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:10:45.639797Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:12:18.603031Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:13:25.253239Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:13:32.092601Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:13:32.346557Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:13:32.349220Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:13:32.349233Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:13:32.349914Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:13:32.349959Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -printModel:1 -inferModifies -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -vcsCores:4 output/spec_no_abort_check.bpl -proverOpt:O:model_validate=true -enhancedErrorMessages:1 -printVerifiedProceduresCount:0 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100
+2025-09-16T20:13:32.349976Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:13:33.158725Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:13:33.162533Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:13:33.173562Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:13:33.179000Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:13:33.179021Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::sum_spec.bpl`
+2025-09-16T20:13:33.180041Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:13:33.180050Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -inferModifies -enhancedErrorMessages:1 -printVerifiedProceduresCount:0 -vcsCores:4 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:model_validate=true -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 output/protocol_formal_verification::sum_spec.bpl -printModel:1 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3
+2025-09-16T20:13:33.180058Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:13:34.302300Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:13:34.303687Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::sum_spec.bpl.log
+2025-09-16T20:13:34.307081Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.236s translation, 1.979s verification
+2025-09-16T20:14:03.115437Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:14:11.543209Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:14:37.077657Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:14:45.452367Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:14:45.678358Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:14:45.681746Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:14:45.681759Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:14:45.683412Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:14:45.683421Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -inferModifies -printModel:1 -printVerifiedProceduresCount:0 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -vcsCores:4 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:O:model_validate=true output/spec_no_abort_check.bpl -enhancedErrorMessages:1
+2025-09-16T20:14:45.683433Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:14:46.469653Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:14:46.470465Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:14:46.481209Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:14:46.484022Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:14:46.484035Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::sum_spec.bpl`
+2025-09-16T20:14:46.485101Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:14:46.485109Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -enhancedErrorMessages:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -printModel:1 -printVerifiedProceduresCount:0 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -inferModifies -vcsCores:4 -proverOpt:O:model_validate=true output/protocol_formal_verification::sum_spec.bpl
+2025-09-16T20:14:46.485118Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:14:47.612892Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:14:47.614270Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::sum_spec.bpl.log
+2025-09-16T20:14:47.618025Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.209s translation, 1.958s verification
+2025-09-16T20:15:32.557842Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:15:41.673440Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:15:41.917383Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:15:41.923891Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:15:41.923911Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:15:41.925666Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:15:41.925675Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -vcsCores:4 -printModel:1 -inferModifies output/spec_no_abort_check.bpl -proverOpt:O:model_validate=true -printVerifiedProceduresCount:0 -enhancedErrorMessages:1 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100
+2025-09-16T20:15:41.925687Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:15:42.691343Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:15:42.695618Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:15:42.708036Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:15:42.711234Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:15:42.711248Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::sum_spec.bpl`
+2025-09-16T20:15:42.711557Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:15:42.711563Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -inferModifies -enhancedErrorMessages:1 -printVerifiedProceduresCount:0 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -vcsCores:4 -printModel:1 -proverOpt:O:model_validate=true -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 output/protocol_formal_verification::sum_spec.bpl
+2025-09-16T20:15:42.711571Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:15:43.794999Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:15:43.796485Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::sum_spec.bpl.log
+2025-09-16T20:15:43.800872Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.222s translation, 1.908s verification
+2025-09-16T20:22:18.868105Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:22:31.902157Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:22:38.290921Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:22:38.546348Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:22:38.548994Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:22:38.549007Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:22:38.549649Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:22:38.549657Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -inferModifies -proverOpt:O:model_validate=true -printVerifiedProceduresCount:0 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -enhancedErrorMessages:1 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -vcsCores:4 -printModel:1 output/spec_no_abort_check.bpl
+2025-09-16T20:22:38.549669Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:22:39.355943Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:22:39.359714Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:22:39.370150Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:22:39.371731Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:22:39.371743Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::this_is_not_inc_spec_yet_it_targets_inc.bpl`
+2025-09-16T20:22:39.372719Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:22:39.372737Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie output/protocol_formal_verification::this_is_not_inc_spec_yet_it_targets_inc.bpl -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:model_validate=true -enhancedErrorMessages:1 -inferModifies -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -printModel:1 -printVerifiedProceduresCount:0 -vcsCores:4
+2025-09-16T20:22:39.372747Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:22:40.515332Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:22:40.517325Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::this_is_not_inc_spec_yet_it_targets_inc.bpl.log
+2025-09-16T20:22:40.520011Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.234s translation, 1.997s verification
+2025-09-16T20:24:55.427997Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:25:26.367429Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:26:03.454736Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:26:32.088393Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:26:38.196579Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T20:26:38.472013Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:26:38.475274Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:26:38.475290Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T20:26:38.475975Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:26:38.475983Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -printVerifiedProceduresCount:0 -proverOpt:O:model_validate=true -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -vcsCores:4 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -printModel:1 output/spec_no_abort_check.bpl -enhancedErrorMessages:1 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -inferModifies
+2025-09-16T20:26:38.475995Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:26:39.266683Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:26:39.269793Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T20:26:39.281767Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T20:26:39.285217Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T20:26:39.285234Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::inc_spec.bpl`
+2025-09-16T20:26:39.287109Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T20:26:39.287125Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -printVerifiedProceduresCount:0 -inferModifies -printModel:1 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:O:model_validate=true -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -vcsCores:4 -enhancedErrorMessages:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 output/protocol_formal_verification::inc_spec.bpl
+2025-09-16T20:26:39.287141Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T20:26:40.420745Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T20:26:40.423035Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::inc_spec.bpl.log
+2025-09-16T20:26:40.426743Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.251s translation, 1.982s verification
+2025-09-16T20:53:40.256740Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:54:33.540762Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:54:59.506236Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:55:05.466190Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:56:50.746959Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:57:06.562984Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:57:23.943925Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:59:21.102609Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T20:59:50.363135Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:00:04.514332Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:00:22.837984Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:08:37.381572Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:08:44.410229Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:09:17.075494Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:09:49.403967Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:10:02.720509Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:10:15.938511Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:30:30.733816Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:30:36.664625Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T21:30:55.848763Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:35:01.962511Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:35:08.349244Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T21:35:08.603607Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T21:35:08.607376Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T21:35:08.607393Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/spec_no_abort_check.bpl`
+2025-09-16T21:35:08.608170Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:35:08.608182Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie output/spec_no_abort_check.bpl -inferModifies -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -vcsCores:4 -printVerifiedProceduresCount:0 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -printModel:1 -enhancedErrorMessages:1 -proverOpt:O:model_validate=true -proverOpt:O:smt.QI.LAZY_THRESHOLD=100
+2025-09-16T21:35:08.608194Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:35:09.446324Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:35:09.453971Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/spec_no_abort_check.bpl.log
+2025-09-16T21:35:09.466541Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T21:35:09.469719Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T21:35:09.469733Z DEBUG move_prover_boogie_backend::generator: writing boogie to `output/protocol_formal_verification::sum_spec.bpl`
+2025-09-16T21:35:09.469975Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:35:09.469982Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.47/bin/boogie -enhancedErrorMessages:1 -proverOpt:O:model_validate=true -vcsCores:4 -printVerifiedProceduresCount:0 -printModel:1 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 output/protocol_formal_verification::sum_spec.bpl -inferModifies -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100
+2025-09-16T21:35:09.469989Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:35:10.588435Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:35:10.592465Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to output/protocol_formal_verification::sum_spec.bpl.log
+2025-09-16T21:35:10.598563Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.236s translation, 2.016s verification
+2025-09-16T21:35:22.276205Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:35:40.340786Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:35:46.111127Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T21:36:19.248770Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:36:25.023851Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T21:36:36.844974Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:36:42.215445Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::protocol_formal_verification
+2025-09-16T21:45:18.995684Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:45:51.592212Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:45:59.366625Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::simple_lp
+2025-09-16T21:45:59.605705Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T21:45:59.617600Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T21:45:59.617619Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl`
+2025-09-16T21:45:59.619500Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:45:59.619512Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -enhancedErrorMessages:1 -printModel:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:model_validate=true -vcsCores:4 -printVerifiedProceduresCount:0 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -inferModifies
+2025-09-16T21:45:59.619527Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:46:00.518613Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:46:00.521148Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl.log
+2025-09-16T21:46:00.532029Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 229 module(s)
+2025-09-16T21:46:00.543199Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 81 verification conditions
+2025-09-16T21:46:00.543214Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl`
+2025-09-16T21:46:00.544464Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:46:00.544473Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:model_validate=true -printModel:1 -vcsCores:4 -printVerifiedProceduresCount:0 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -inferModifies -enhancedErrorMessages:1 /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl
+2025-09-16T21:46:00.544481Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:46:00.844969Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:46:00.845032Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl.log
+2025-09-16T21:46:00.846169Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.244s translation, 1.272s verification
+2025-09-16T21:50:13.362305Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:50:19.403365Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::simple_lp
+2025-09-16T21:50:19.404489Z  INFO move_prover_boogie_backend::generator: preparing module 0x1::addition
+2025-09-16T21:50:36.643150Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:50:42.278277Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::simple_lp
+2025-09-16T21:50:42.279406Z  INFO move_prover_boogie_backend::generator: preparing module 0x1::addition
+2025-09-16T21:50:42.542015Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 230 module(s)
+2025-09-16T21:50:42.555758Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 82 verification conditions
+2025-09-16T21:50:42.555777Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl`
+2025-09-16T21:50:42.570682Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:50:42.570708Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -printModel:1 -proverOpt:O:model_validate=true -vcsCores:4 -printVerifiedProceduresCount:0 -enhancedErrorMessages:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -inferModifies
+2025-09-16T21:50:42.570737Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:50:43.433965Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:50:43.442990Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl.log
+2025-09-16T21:50:43.455106Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 230 module(s)
+2025-09-16T21:50:43.467964Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 82 verification conditions
+2025-09-16T21:50:43.467980Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl`
+2025-09-16T21:50:43.470159Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:50:43.470169Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -printModel:1 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -printVerifiedProceduresCount:0 -vcsCores:4 -proverOpt:O:model_validate=true -inferModifies /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -enhancedErrorMessages:1
+2025-09-16T21:50:43.470178Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:50:43.783161Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:50:43.783269Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl.log
+2025-09-16T21:50:43.797579Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 230 module(s)
+2025-09-16T21:50:43.809026Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 82 verification conditions
+2025-09-16T21:50:43.809044Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/addition::add_spec.bpl`
+2025-09-16T21:50:43.812286Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:50:43.812297Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -inferModifies -printModel:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -printVerifiedProceduresCount:0 -vcsCores:4 -enhancedErrorMessages:1 /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/addition::add_spec.bpl -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:model_validate=true -proverOpt:O:smt.QI.LAZY_THRESHOLD=100
+2025-09-16T21:50:43.812306Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:50:44.107697Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:50:44.107762Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/addition::add_spec.bpl.log
+2025-09-16T21:50:44.109023Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.253s translation, 1.605s verification
+2025-09-16T21:53:02.429797Z DEBUG sui_prover: Sui-Prover CLI version: 0.0.2
+2025-09-16T21:53:08.460485Z  INFO move_prover_boogie_backend::generator: preparing module 0x0::simple_lp
+2025-09-16T21:53:08.461594Z  INFO move_prover_boogie_backend::generator: preparing module 0x1::addition
+2025-09-16T21:53:08.679292Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 230 module(s)
+2025-09-16T21:53:08.690056Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 82 verification conditions
+2025-09-16T21:53:08.690077Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl`
+2025-09-16T21:53:08.693245Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:53:08.693274Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -proverOpt:O:model_validate=true -enhancedErrorMessages:1 -inferModifies -vcsCores:4 /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl -printModel:1 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -printVerifiedProceduresCount:0
+2025-09-16T21:53:08.693294Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:53:09.683822Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:53:09.687598Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/spec_no_abort_check.bpl.log
+2025-09-16T21:53:09.698234Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 230 module(s)
+2025-09-16T21:53:09.712244Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 82 verification conditions
+2025-09-16T21:53:09.712262Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl`
+2025-09-16T21:53:09.713826Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:53:09.713835Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -inferModifies -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -printVerifiedProceduresCount:0 -vcsCores:4 -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -enhancedErrorMessages:1 /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl -printModel:1 -proverOpt:O:model_validate=true
+2025-09-16T21:53:09.713844Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:53:10.035415Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:53:10.035515Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/simple_lp::withdraw_spec.bpl.log
+2025-09-16T21:53:10.047316Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: generating verification conditions for 230 module(s)
+2025-09-16T21:53:10.058029Z  INFO move_prover_boogie_backend::boogie_backend::bytecode_translator: 82 verification conditions
+2025-09-16T21:53:10.058046Z DEBUG move_prover_boogie_backend::generator: writing boogie to `/Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/addition::add_spec.bpl`
+2025-09-16T21:53:10.060233Z  INFO move_prover_boogie_backend::boogie_backend::boogie_wrapper: running solver
+2025-09-16T21:53:10.060277Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: command line: /usr/local/Cellar/sui-prover/0.3.50/bin/boogie -proverOpt:O:smt.QI.LAZY_THRESHOLD=100 -vcsCores:4 -enhancedErrorMessages:1 -proverOpt:PROVER_PATH=/usr/local/opt/z3/bin/z3 -inferModifies /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/addition::add_spec.bpl -proverOpt:O:model_validate=true -proverOpt:O:smt.QI.EAGER_THRESHOLD=100 -printModel:1 -printVerifiedProceduresCount:0
+2025-09-16T21:53:10.060292Z DEBUG move_prover_boogie_backend::boogie_backend::prover_task_runner: running Boogie command with seed 0
+2025-09-16T21:53:10.374940Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: analyzing boogie output
+2025-09-16T21:53:10.375019Z DEBUG move_prover_boogie_backend::boogie_backend::boogie_wrapper: writing boogie log to /Users/iftikharuddin/PhpstormProjects/security-course/formal-verification-course/protocol_formal_verification/output/addition::add_spec.bpl.log
+2025-09-16T21:53:10.376046Z  INFO move_prover_boogie_backend::generator: 0.000s building, 0.232s translation, 1.719s verification
